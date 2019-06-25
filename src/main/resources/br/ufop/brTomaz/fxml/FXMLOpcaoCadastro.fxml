@@ -100,14 +100,14 @@
                   <Font name="CoolveticaRg-Regular" size="30.0" />
                </font>
             </Text>
-            <JFXButton contentDisplay="TOP" layoutX="14.0" layoutY="148.0" prefHeight="133.0" prefWidth="168.0" style="-fx-background-color: #ffffff;" text="Motorista" textFill="#28b4d3">
+            <JFXButton fx:id="btnMotorista" contentDisplay="TOP" layoutX="14.0" layoutY="148.0" prefHeight="133.0" prefWidth="168.0" style="-fx-background-color: #ffffff;" text="Motorista" textFill="#28b4d3">
                <font>
                   <Font name="CoolveticaRg-Regular" size="26.0" />
                </font>
                <graphic>
                   <FontIcon iconColor="#28b4d3" iconLiteral="fa-car" iconSize="25" />
                </graphic></JFXButton>
-            <JFXButton contentDisplay="TOP" layoutX="225.0" layoutY="148.0" prefHeight="133.0" prefWidth="168.0" style="-fx-background-color: #ffffff;" text="Passageiro" textFill="#c6369b">
+            <JFXButton fx:id="btnPassageiro" contentDisplay="TOP" layoutX="225.0" layoutY="148.0" prefHeight="133.0" prefWidth="168.0" style="-fx-background-color: #ffffff;" text="Passageiro" textFill="#c6369b">
                <font>
                   <Font name="CoolveticaRg-Regular" size="26.0" />
                </font>

@@ -113,7 +113,7 @@
                <font>
                   <Font name="CoolveticaRg-Regular" size="14.0" />
                </font></JFXTextField>
-            <Label layoutX="15.0" layoutY="157.0" text="Seu(s) carro(s)" textFill="WHITE">
+            <Label layoutX="15.0" layoutY="157.0" text="Seu(s) carro(s):" textFill="WHITE">
                <font>
                   <Font name="CoolveticaRg-Regular" size="14.0" />
                </font>

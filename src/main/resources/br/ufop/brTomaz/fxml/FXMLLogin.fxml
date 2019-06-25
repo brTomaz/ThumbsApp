@@ -8,19 +8,19 @@
 <?import javafx.scene.text.Text?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="638.0" style="-fx-background-color: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="638.0" style="-fx-background-color: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufop.brTomaz.controller.FXMLLoginController">
    <children>
-      <JFXTextField alignment="CENTER" focusColor="#405aa800" layoutX="202.0" layoutY="167.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="235.0" promptText="E-mail" style="-fx-background-color: #ffffff;" unFocusColor="#629c9c00" AnchorPane.bottomAnchor="205.0" AnchorPane.leftAnchor="202.0" AnchorPane.rightAnchor="201.0" AnchorPane.topAnchor="167.0">
+      <JFXTextField fx:id="txtEmail" alignment="CENTER" focusColor="#405aa800" layoutX="202.0" layoutY="167.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="235.0" promptText="E-mail" style="-fx-background-color: #ffffff;" unFocusColor="#629c9c00" AnchorPane.bottomAnchor="205.0" AnchorPane.leftAnchor="202.0" AnchorPane.rightAnchor="201.0" AnchorPane.topAnchor="167.0">
          <font>
             <Font name="CoolveticaRg-Regular" size="14.0" />
          </font>
       </JFXTextField>
-      <JFXPasswordField alignment="CENTER" focusColor="#405aa800" layoutX="202.0" layoutY="211.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="235.0" promptText="Senha" style="-fx-background-color: #ffffff;" unFocusColor="#4d4d4d00" AnchorPane.bottomAnchor="161.0" AnchorPane.leftAnchor="202.0" AnchorPane.rightAnchor="201.0" AnchorPane.topAnchor="211.0">
+      <JFXPasswordField fx:id="txtSenha" alignment="CENTER" focusColor="#405aa800" layoutX="202.0" layoutY="211.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="235.0" promptText="Senha" style="-fx-background-color: #ffffff;" unFocusColor="#4d4d4d00" AnchorPane.bottomAnchor="161.0" AnchorPane.leftAnchor="202.0" AnchorPane.rightAnchor="201.0" AnchorPane.topAnchor="211.0">
          <font>
             <Font name="CoolveticaRg-Regular" size="14.0" />
          </font>
       </JFXPasswordField>
-      <JFXButton layoutX="202.0" layoutY="257.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="235.0" style="-fx-background-color: #138DA9;" text="Entrar" textFill="WHITE" AnchorPane.bottomAnchor="115.0" AnchorPane.leftAnchor="202.0" AnchorPane.rightAnchor="201.0" AnchorPane.topAnchor="257.0">
+      <JFXButton fx:id="btnEntrar" layoutX="202.0" layoutY="257.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#entrar" prefHeight="28.0" prefWidth="235.0" style="-fx-background-color: #138DA9;" text="Entrar" textFill="WHITE" AnchorPane.bottomAnchor="115.0" AnchorPane.leftAnchor="202.0" AnchorPane.rightAnchor="201.0" AnchorPane.topAnchor="257.0">
          <font>
             <Font name="CoolveticaRg-Regular" size="14.0" />
          </font>
@@ -30,7 +30,7 @@
             <Font name="CoolveticaRg-Regular" size="14.0" />
          </font>
       </Text>
-      <JFXButton layoutX="202.0" layoutY="349.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="235.0" style="-fx-border-color: #a40d74;" text="Cadastre-se" textFill="#a40d74" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="202.0" AnchorPane.rightAnchor="201.0" AnchorPane.topAnchor="349.0">
+      <JFXButton layoutX="202.0" layoutY="349.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#cadastrar" prefHeight="28.0" prefWidth="235.0" style="-fx-border-color: #a40d74;" text="Cadastre-se" textFill="#a40d74" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="202.0" AnchorPane.rightAnchor="201.0" AnchorPane.topAnchor="349.0">
          <font>
             <Font name="CoolveticaRg-Regular" size="14.0" />
          </font>
