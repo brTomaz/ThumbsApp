@@ -12,6 +12,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
+import javafx.scene.control.TextInputDialog;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.util.Duration;
@@ -91,7 +92,24 @@ public class FXMLCadastroController implements Initializable {
 
     @FXML
     private void cadastrarMotorista() throws IOException {
-        //TODO Pesquisar como recuperar um result de um dialog
+
+        String nome = txtNome.getText();
+        String nomeUsuario = txtNomeUsuario.getText();
+        String telefone = txtTelefone.getText();
+        String CPF = txtCPF.getText();
+        String email = txtEmail.getText();
+        String senha = txtSenha.getText();
+        String cnh;
+
+        TextInputDialog cnhDialog = new TextInputDialog();
+
+        cnhDialog.setTitle("Entrada de CNH");
+        cnhDialog.setHeaderText("Digite o número da sua CNH");
+        cnhDialog.setContentText("CNH: ");
+
+        cnh = cnhDialog.showAndWait().get();
+
+
 
         MainApplication.setScreen(Screen.HOME_MOTORISTA);
 
@@ -114,6 +132,7 @@ public class FXMLCadastroController implements Initializable {
             MainApplication.setScreen(Screen.HOME_PASSAGEIRO);
         } else{
             Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.show();
         }
     }
 

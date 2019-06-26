@@ -28,7 +28,7 @@ public class UsuarioDAO {
     
     public boolean save(Usuario usuario){
         
-        String sql = "INSERT INTO usuario(cpf, nome, email, cnh, senha, telefone, nick) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO usuario(cpf, nome, email, cnh, senha, telefone, nome_usuario) VALUES(?, ?, ?, ?, ?, ?, ?)";
         
         PreparedStatement stmt = null;
         
@@ -44,7 +44,7 @@ public class UsuarioDAO {
             stmt.executeUpdate();
             return true;
         } catch (SQLException ex) {
-            System.err.println("Erro: "+ex);
+            System.err.println("Erro: " + ex);
             return false;
         }finally{
             ConnectionFactory.closeConnection(con, stmt);

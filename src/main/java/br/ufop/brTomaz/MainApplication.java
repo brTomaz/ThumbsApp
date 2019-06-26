@@ -18,17 +18,18 @@ public class MainApplication extends Application {
     }
 
     public static void setScreen(Screen screen) throws IOException {
+        stage.setResizable(true);
         Parent parent = FXMLLoader.load(MainApplication.class.getResource(screen.getFXMLPath()));
         Scene oldScene = stage.getScene();
         //double width = oldScene != null ? oldScene.getWidth() : 638.0;
         //double height = oldScene != null ? oldScene.getHeight() : 400.0;
         stage.setScene(new Scene(parent));
+        stage.setResizable(false);
         stage.show();
     }
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        primaryStage.setResizable(false);
         stage = primaryStage;
         setScreen(Screen.LOGIN);
     }

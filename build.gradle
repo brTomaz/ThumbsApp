@@ -31,4 +31,6 @@ dependencies {
     compile group: 'com.jfoenix', name: 'jfoenix', version: '9.0.8'
     compile 'org.kordamp.ikonli:ikonli-javafx:11.3.3'
     compile 'org.kordamp.ikonli:ikonli-fontawesome-pack:11.3.3'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.16'
+
 }
