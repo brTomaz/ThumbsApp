@@ -1,18 +1,23 @@
 package br.ufop.brTomaz.controller;
 
 import br.ufop.brTomaz.MainApplication;
+import br.ufop.brTomaz.model.dao.UsuarioDAO;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
-import javafx.event.ActionEvent;
+import javafx.beans.property.BooleanProperty;
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleBooleanProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import static br.ufop.brTomaz.MainApplication.usuarioCorrente;
 
 public class FXMLLoginController implements Initializable {
 
@@ -20,8 +25,34 @@ public class FXMLLoginController implements Initializable {
     @FXML private JFXPasswordField txtSenha;
     @FXML private JFXButton btnEntrar;
 
+    private BooleanProperty permission = new SimpleBooleanProperty(false);
+    private IntegerProperty tries = new SimpleIntegerProperty(3);
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        permission.addListener((ob, ov, nv) -> {
+            if(nv) {
+                try {
+                    Screen screen = usuarioCorrente.getCnh() == null ? Screen.HOME_PASSAGEIRO : Screen.HOME_MOTORISTA;
+                    MainApplication.setScreen(screen);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        tries.addListener((ob, ov, nv) -> {
+            if(nv.intValue() > 0 && !permission.getValue()) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Senha inválida");
+                alert.setContentText("Tentativas restantes: " + nv.intValue());
+                alert.show();
+                txtSenha.clear();
+            }
+            else if(!permission.getValue())
+                MainApplication.closeApplication();
+        });
+
         btnEntrar.disableProperty()
                 .bind(txtEmail.textProperty().isEmpty()
                         .or(txtSenha.textProperty().isEmpty())
@@ -29,9 +60,28 @@ public class FXMLLoginController implements Initializable {
     }
 
     @FXML
-    private void entrar(){
+    private void entrar() throws IOException {
         String email = txtEmail.getText();
         String senha = txtSenha.getText();
+
+        UsuarioDAO usuarioDAO = new UsuarioDAO();
+        usuarioCorrente = usuarioDAO.retrieveUser(email);
+
+        if(usuarioCorrente != null)
+        {
+            permission.setValue(usuarioCorrente.getSenha().equals(senha));
+            tries.set(tries.getValue() - 1);
+        }
+        else
+        {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Usuário inválido");
+            alert.setContentText("O email digitado não está cadastrado no sistema.");
+            alert.show();
+
+            txtEmail.clear();
+            txtSenha.clear();
+        }
     }
 
     @FXML

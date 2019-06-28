@@ -40,7 +40,7 @@ public class ConnectionFactory {
             try {
                 con.close();
             } catch (SQLException ex) {
-                System.err.println("Erro: "+ex);
+                System.err.println("Erro: " + ex);
             }
         }
     }

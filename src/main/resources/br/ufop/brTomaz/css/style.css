@@ -8,3 +8,15 @@
     -fx-border-style: solid;
     -fx-border-color: #ffffff;
 }
+
+.jfx-text-field, .jfx-password-field{
+    -fx-prompt-text-fill: rgba(128, 128, 128, 0.64);
+}
+
+.combo-box {
+    -fx-font-family: CoolveticaRg-Regular;
+    -fx-font-size: 15.0;
+}
+
+
+

@@ -1,7 +1,9 @@
 package br.ufop.brTomaz;
 
 import br.ufop.brTomaz.controller.Screen;
+import br.ufop.brTomaz.model.bean.Usuario;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -12,6 +14,13 @@ import java.io.IOException;
 public class MainApplication extends Application {
 
     private static Stage stage;
+    public static Usuario usuarioCorrente;
+
+    public static void closeApplication()
+    {
+        Platform.exit();
+        System.exit(0);
+    }
 
     public static void main(String[] args) {
         launch(args);

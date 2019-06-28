@@ -7,7 +7,7 @@ public enum Screen {
     HOME_MOTORISTA("FXMLHomeMotorista.fxml"),
     HOME_PASSAGEIRO("FXMLHomePassageiro.fxml"),
     LOGIN("FXMLLogin.fxml"),
-    MOTORISTA("FXMLMotorista.fxml"),
+    CADASTRO_CARRO("FXMLCadastroCarro.fxml"),
     OFERECER_CARONA("FXMLOferecerCarona.fxml"),
     OPCAO_CADASTRO("FXMLOpcaoCadastro.fxml");
 

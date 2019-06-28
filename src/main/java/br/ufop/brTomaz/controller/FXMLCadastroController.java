@@ -3,10 +3,15 @@ package br.ufop.brTomaz.controller;
 import br.ufop.brTomaz.MainApplication;
 import br.ufop.brTomaz.model.bean.Usuario;
 import br.ufop.brTomaz.model.dao.UsuarioDAO;
+import br.ufop.brTomaz.util.MaskFieldUtil;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import javafx.animation.FadeTransition;
+import javafx.beans.property.BooleanProperty;
+import javafx.beans.property.SimpleBooleanProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -42,9 +47,6 @@ public class FXMLCadastroController implements Initializable {
     private JFXPasswordField txtSenha;
 
     @FXML
-    private JFXTextField txtData;
-
-    @FXML
     private JFXButton btnEnviar;
 
     @FXML
@@ -62,7 +64,6 @@ public class FXMLCadastroController implements Initializable {
     @FXML
     private void enviar() throws IOException {
 
-
         dataPane.setDisable(true);
         dataPane.setOpacity(0.0);
         optionPane.setDisable(false);
@@ -74,19 +75,33 @@ public class FXMLCadastroController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        MaskFieldUtil.cpfField(txtCPF);
+        MaskFieldUtil.foneField(txtTelefone);
+
+        BooleanProperty sizeCpf = new SimpleBooleanProperty(true);
+        BooleanProperty sizeFone = new SimpleBooleanProperty(true);
+
+        txtCPF.textProperty().addListener((ob, ov, nv) -> {
+            sizeCpf.setValue(nv.length() < 14);
+        });
+        txtTelefone.textProperty().addListener((ob, ov, nv) -> {
+            sizeFone.setValue(nv.length() < 14);
+        });
+
+
         btnEnviar.disableProperty().bind(
                 txtNome.textProperty().isEmpty()
-                .or(txtCPF.textProperty().isEmpty()
-                    .or(txtData.textProperty().isEmpty()
-                        .or(txtNome.textProperty().isEmpty()
-                            .or(txtSenha.textProperty().isEmpty()
-                                .or(txtEmail.textProperty().isEmpty()
-                                    .or(txtTelefone.textProperty().isEmpty())
+                        .or(txtCPF.textProperty().isEmpty()
+                                .or(txtNome.textProperty().isEmpty()
+                                        .or(txtSenha.textProperty().isEmpty()
+                                                .or(txtEmail.textProperty().isEmpty()
+                                                        .or(txtTelefone.textProperty().isEmpty())
+                                                        .or(sizeCpf)
+                                                        .or(sizeFone)
+                                                )
+                                        )
                                 )
-                            )
                         )
-                    )
-                )
         );
     }
 
@@ -95,32 +110,43 @@ public class FXMLCadastroController implements Initializable {
 
         String nome = txtNome.getText();
         String nomeUsuario = txtNomeUsuario.getText();
-        String telefone = txtTelefone.getText();
-        String CPF = txtCPF.getText();
+
+        String telefone = MaskFieldUtil.onlyDigitsValue(txtTelefone);
+        String CPF = MaskFieldUtil.onlyDigitsValue(txtCPF);
+
         String email = txtEmail.getText();
         String senha = txtSenha.getText();
-        String cnh;
+        final StringProperty cnh = new SimpleStringProperty("");
+        cnh.addListener((ob, ov, nv) -> {
+            nv = nv.length() > 11 ? nv.substring(0, 11) : nv.strip();
+            cnh.setValue(nv);
+        });
 
         TextInputDialog cnhDialog = new TextInputDialog();
 
         cnhDialog.setTitle("Entrada de CNH");
         cnhDialog.setHeaderText("Digite o número da sua CNH");
         cnhDialog.setContentText("CNH: ");
+        cnhDialog.showAndWait().ifPresent(cnh::set);
 
-        cnh = cnhDialog.showAndWait().get();
+        Usuario usuario = new Usuario(CPF, nome, email, cnh.getValue(), senha, telefone, nomeUsuario);
 
+        Boolean ok = new UsuarioDAO().save(usuario);
 
-
-        MainApplication.setScreen(Screen.HOME_MOTORISTA);
-
+        if (ok) {
+            MainApplication.setScreen(Screen.HOME_MOTORISTA);
+        } else {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.show();
+        }
     }
 
     @FXML
     private void cadastrarPassageiro() throws IOException {
         String nome = txtNome.getText();
         String nomeUsuario = txtNomeUsuario.getText();
-        String telefone = txtTelefone.getText();
-        String CPF = txtCPF.getText();
+        String telefone = MaskFieldUtil.onlyDigitsValue(txtTelefone);
+        String CPF = MaskFieldUtil.onlyDigitsValue(txtCPF);
         String email = txtEmail.getText();
         String senha = txtSenha.getText();
 
@@ -128,15 +154,15 @@ public class FXMLCadastroController implements Initializable {
 
         Boolean ok = new UsuarioDAO().save(usuario);
 
-        if(ok){
-            MainApplication.setScreen(Screen.HOME_PASSAGEIRO);
-        } else{
+        if (ok) {
+            //MainApplication.setScreen(Screen.HOME_PASSAGEIRO);
+        } else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.show();
         }
     }
 
-    private void transition(Pane show, Pane hide){
+    private void transition(Pane show, Pane hide) {
         FadeTransition transition = new FadeTransition();
         transition.setNode(show);
         transition.setDuration(Duration.seconds(1));
@@ -145,7 +171,7 @@ public class FXMLCadastroController implements Initializable {
         transition.setOnFinished(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                FadeTransition fadeIn = new FadeTransition(Duration.seconds(1),hide);
+                FadeTransition fadeIn = new FadeTransition(Duration.seconds(1), hide);
                 fadeIn.setFromValue(0.0);
                 fadeIn.setToValue(1.0);
                 fadeIn.play();
@@ -153,8 +179,5 @@ public class FXMLCadastroController implements Initializable {
         });
         transition.play();
         hide.toFront();
-
     }
-
-
 }
