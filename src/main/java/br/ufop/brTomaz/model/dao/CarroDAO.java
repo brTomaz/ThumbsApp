@@ -7,7 +7,6 @@ package br.ufop.brTomaz.model.dao;
 
 import br.ufop.brTomaz.connection.ConnectionFactory;
 import br.ufop.brTomaz.model.bean.Carro;
-import br.ufop.brTomaz.model.bean.Usuario;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

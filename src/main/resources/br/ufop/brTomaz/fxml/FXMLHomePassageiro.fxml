@@ -11,10 +11,7 @@
 <?import javafx.scene.text.Text?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
-            prefWidth="638.0" style="-fx-background-color: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);;"
-            stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.1"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufop.brTomaz.controller.FXMLHomePassageiroController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="638.0" style="-fx-background-color: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);;" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufop.brTomaz.controller.FXMLHomePassageiroController">
    <children>
       <VBox prefHeight="400.0" prefWidth="231.0" style="-fx-background-color: #138DA9;">
          <children>
@@ -104,7 +101,7 @@
                   <Font name="CoolveticaRg-Regular" size="25.0" />
                </font>
             </Label>
-            <JFXButton fx:id="btnPesquisar" contentDisplay="TOP" layoutX="128.0" layoutY="228.0" prefHeight="75.0" prefWidth="154.0" style="-fx-background-color: #ffffff;" text="Pesquisar caronas" textFill="#28b4d3">
+            <JFXButton fx:id="btnPesquisar" contentDisplay="TOP" layoutX="128.0" layoutY="228.0" onAction="#pesquisar" prefHeight="75.0" prefWidth="154.0" style="-fx-background-color: #ffffff;" text="Pesquisar caronas" textFill="#28b4d3">
                <font>
                   <Font name="CoolveticaRg-Regular" size="17.0" />
                </font>

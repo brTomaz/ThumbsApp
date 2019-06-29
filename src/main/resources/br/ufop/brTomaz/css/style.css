@@ -18,5 +18,12 @@
     -fx-font-size: 15.0;
 }
 
-
+.date-picker {
+    -fx-font-family: CoolveticaRg-Regular;
+    -fx-font-size: 15.0;
+}
+.list-view {
+    -fx-font-family: CoolveticaRg-Regular;
+    -fx-font-size: 15.0;
+}
 

@@ -1,6 +1,5 @@
 package br.ufop.brTomaz.controller;
 
-import br.ufop.brTomaz.MainApplication;
 import br.ufop.brTomaz.model.bean.Carro;
 import br.ufop.brTomaz.model.dao.CarroDAO;
 import br.ufop.brTomaz.util.CarroUtils;
@@ -9,7 +8,6 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXListView;
 import com.jfoenix.controls.JFXTextField;
-import javafx.beans.binding.Bindings;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -108,8 +106,7 @@ public class FXMLCadastroCarroController implements Initializable {
     }
 
     @FXML
-    private void incluir()
-    {
+    private void incluir() throws IOException {
         String marca = cmbMarca.getSelectionModel().getSelectedItem().getName();
         String modelo = cmbModelo.getSelectionModel().getSelectedItem().getName();
         int ano = cmbAno.getSelectionModel().getSelectedItem();
@@ -121,17 +118,18 @@ public class FXMLCadastroCarroController implements Initializable {
         Boolean ok = new CarroDAO().save(carro);
 
         if (ok) {
-            try
-            {
-                MainApplication.setScreen(Screen.HOME_MOTORISTA);
-            }
-            catch (IOException e)
-            {
-                e.printStackTrace();
-            }
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Cadastro realizado");
+            alert.setContentText("O cadastro foi realizado com sucesso!");
+            alert.show();
+            clear();
+            carregarCarrosUsuario();
         } else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Erro");
+            alert.setContentText("Não foi possível realizar o cadastro");
             alert.show();
+            clear();
         }
     }
 
@@ -188,13 +186,18 @@ public class FXMLCadastroCarroController implements Initializable {
         Carro carro = listViewCarros.getSelectionModel().getSelectedItem();
         CarroDAO carroDAO = new CarroDAO();
         carroDAO.delete(carro);
+        clear();
+        listViewCarros.getSelectionModel().clearSelection();
+        listViewCarros.getItems().remove(carro);
+    }
+
+    @FXML private void clear()
+    {
         txtPlaca.textProperty().unbind();
         txtPlaca.clear();
         cmbAno.getSelectionModel().clearSelection();;
         cmbCor.getSelectionModel().clearSelection();
         cmbModelo.getSelectionModel().clearSelection();
         cmbMarca.getSelectionModel().clearSelection();
-        listViewCarros.getSelectionModel().clearSelection();
-        listViewCarros.getItems().remove(carro);
     }
 }

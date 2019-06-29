@@ -1,8 +1,6 @@
 package br.ufop.brTomaz.controller;
 
 import br.ufop.brTomaz.MainApplication;
-import com.jfoenix.controls.JFXButton;
-import com.sun.tools.javac.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
@@ -19,6 +17,11 @@ public class FXMLHomeMotoristaController implements Initializable {
     @FXML
     private void adicionarCarro() throws IOException {
         MainApplication.setScreen(Screen.CADASTRO_CARRO);
+    }
+
+    @FXML
+    private void oferecerCarona() throws IOException {
+        MainApplication.setScreen(Screen.OFERECER_CARONA);
     }
 
     @Override

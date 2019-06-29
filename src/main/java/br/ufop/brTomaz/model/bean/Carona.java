@@ -5,8 +5,6 @@
  */
 package br.ufop.brTomaz.model.bean;
 
-import java.sql.Date;
-
 /**
  *
  * @author Usuario
@@ -16,23 +14,28 @@ public class Carona {
     private String origem;
     private String destino;
     private String dia;
-    private String hora;
+    private String horario;
     private double valor;
-    private int vagas;
+    private int quantidade_vagas;
+    private int quantidade_atual;
+    private String placa_carro;
     private String cpf_motorista;
 
-    public Carona() {
-    }
-
-    public Carona(int idcarona, String origem, String destino, String dia, String hora, double valor, int vagas, String cpf_motorista) {
+    public Carona(int idcarona, String origem, String destino, String dia, String horario, double valor, int quantidade_vagas, int quantidade_atual, String placa_carro, String cpf_motorista) {
         this.idcarona = idcarona;
         this.origem = origem;
         this.destino = destino;
         this.dia = dia;
-        this.hora = hora;
+        this.horario = horario;
         this.valor = valor;
-        this.vagas = vagas;
+        this.quantidade_vagas = quantidade_vagas;
+        this.quantidade_atual = quantidade_atual;
+        this.placa_carro = placa_carro;
         this.cpf_motorista = cpf_motorista;
+    }
+
+    public Carona() {
+
     }
 
     public int getIdcarona() {
@@ -67,12 +70,12 @@ public class Carona {
         this.dia = dia;
     }
 
-    public String getHora() {
-        return hora;
+    public String getHorario() {
+        return horario;
     }
 
-    public void setHora(String hora) {
-        this.hora = hora;
+    public void setHorario(String horario) {
+        this.horario = horario;
     }
 
     public double getValor() {
@@ -83,12 +86,28 @@ public class Carona {
         this.valor = valor;
     }
 
-    public int getVagas() {
-        return vagas;
+    public int getQuantidade_vagas() {
+        return quantidade_vagas;
     }
 
-    public void setVagas(int vagas) {
-        this.vagas = vagas;
+    public void setQuantidade_vagas(int quantidade_vagas) {
+        this.quantidade_vagas = quantidade_vagas;
+    }
+
+    public int getQuantidade_atual() {
+        return quantidade_atual;
+    }
+
+    public void setQuantidade_atual(int quantidade_atual) {
+        this.quantidade_atual = quantidade_atual;
+    }
+
+    public String getPlaca_carro() {
+        return placa_carro;
+    }
+
+    public void setPlaca_carro(String placa_carro) {
+        this.placa_carro = placa_carro;
     }
 
     public String getCpf_motorista() {
@@ -98,6 +117,10 @@ public class Carona {
     public void setCpf_motorista(String cpf_motorista) {
         this.cpf_motorista = cpf_motorista;
     }
-    
-    
+
+    @Override
+    public String toString()
+    {
+        return "Dia: " + getDia() + "  --  Horário: " + getHorario() + "  --  Carro: " + getPlaca_carro() + "  --  Vagas: " + getQuantidade_atual();
+    }
 }

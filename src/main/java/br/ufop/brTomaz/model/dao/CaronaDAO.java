@@ -27,7 +27,7 @@ public class CaronaDAO {
     
     public boolean save(Carona carona){
         
-        String sql = "INSERT INTO carona(idcarona, origem, destino, dia, horario, valor, vagas, mcpf) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO carona(idcarona, origem, destino, dia, horario, valor, quantidade_vagas, quantidade_atual, placa_carro, cpf_motorista) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         
         PreparedStatement stmt = null;
         
@@ -37,14 +37,17 @@ public class CaronaDAO {
             stmt.setString(2, carona.getOrigem());
             stmt.setString(3, carona.getDestino());
             stmt.setString(4, carona.getDia());
-            stmt.setString(5, carona.getHora());
+            stmt.setString(5, carona.getHorario());
             stmt.setDouble(6, carona.getValor());
-            stmt.setInt(7, carona.getVagas());
-            stmt.setString(8, carona.getCpf_motorista());
+            stmt.setInt(7, carona.getQuantidade_vagas());
+            stmt.setInt(8, carona.getQuantidade_atual());
+            stmt.setString(9, carona.getPlaca_carro());
+            stmt.setString(10, carona.getCpf_motorista());
+
             stmt.executeUpdate();
             return true;
         } catch (SQLException ex) {
-            System.err.println("Erro: "+ex);
+            System.err.println("Erro: " + ex);
             return false;
         }finally{
             ConnectionFactory.closeConnection(con, stmt);
@@ -66,16 +69,18 @@ public class CaronaDAO {
             while(rs.next()){
                 
                 Carona carona = new Carona();
-                
+
                 carona.setIdcarona(rs.getInt("idcarona"));
                 carona.setOrigem(rs.getString("origem"));
                 carona.setDestino(rs.getString("destino"));
                 carona.setDia(rs.getString("dia"));
-                carona.setHora(rs.getString("horario"));
+                carona.setHorario(rs.getString("horario"));
                 carona.setValor(rs.getDouble("valor"));
-                carona.setVagas(rs.getInt("vagas"));
-                carona.setCpf_motorista(rs.getString("mcpf"));
-                
+                carona.setQuantidade_vagas(rs.getInt("quantidade_vagas"));
+                carona.setQuantidade_atual(rs.getInt("quantidade_atual"));
+                carona.setPlaca_carro(rs.getString("placa_carro"));
+                carona.setCpf_motorista(rs.getString("cpf_motorista"));
+
                 caronas.add(carona);
             }
         } catch (SQLException ex) {
@@ -104,7 +109,7 @@ public class CaronaDAO {
             ConnectionFactory.closeConnection(con, stmt);
         }
     }
-    
+
     public List<Carona> search(String o, String d){
         
         String sql = "SELECT * FROM carona WHERE origem = ? and destino = ?";
@@ -123,23 +128,45 @@ public class CaronaDAO {
             while(rs.next()){
                 
                 Carona carona = new Carona();
-                
+
                 carona.setIdcarona(rs.getInt("idcarona"));
                 carona.setOrigem(rs.getString("origem"));
                 carona.setDestino(rs.getString("destino"));
                 carona.setDia(rs.getString("dia"));
-                carona.setHora(rs.getString("horario"));
+                carona.setHorario(rs.getString("horario"));
                 carona.setValor(rs.getDouble("valor"));
-                carona.setVagas(rs.getInt("vagas"));
-                carona.setCpf_motorista(rs.getString("mcpf"));
+                carona.setQuantidade_vagas(rs.getInt("quantidade_vagas"));
+                carona.setQuantidade_atual(rs.getInt("quantidade_atual"));
+                carona.setPlaca_carro(rs.getString("placa_carro"));
+                carona.setCpf_motorista(rs.getString("cpf_motorista"));
                 
                 caronas.add(carona);
             }
         } catch (SQLException ex) {
-            System.err.println("Erro :"+ex);
+            System.err.println("Erro :" + ex);
         }finally{
             ConnectionFactory.closeConnection(con, stmt, rs);
         }
         return caronas; 
+    }
+
+    public void modificarQuantidadeVagasAtual(Carona carona)
+    {
+        String sql = "UPDATE carona SET quantidade_atual = ? WHERE idcarona = ?";
+
+        PreparedStatement stmt = null;
+
+        try {
+            stmt = con.prepareStatement(sql);
+            stmt.setInt(1, carona.getQuantidade_atual() + 1);
+            stmt.setInt(2, carona.getIdcarona());
+            stmt.executeUpdate();
+
+            } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            ConnectionFactory.closeConnection(con, stmt);
+        }
+
     }
 }

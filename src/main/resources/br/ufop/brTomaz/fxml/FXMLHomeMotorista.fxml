@@ -95,7 +95,7 @@
                 <Font name="CoolveticaRg-Regular" size="25.0" />
             </font>
         </Label>
-        <JFXButton contentDisplay="TOP" layoutX="230.0" layoutY="125.0" onAction="#adicionarCarro" prefHeight="75.0" prefWidth="154.0" style="-fx-background-color: #ffffff;" text="Gerenciar carros" textFill="#28b4d3">
+        <JFXButton contentDisplay="TOP" layoutX="230.0" layoutY="126.0" onAction="#adicionarCarro" prefHeight="75.0" prefWidth="154.0" style="-fx-background-color: #ffffff;" text="Gerenciar carros" textFill="#28b4d3">
             <font>
                 <Font name="CoolveticaRg-Regular" size="17.0" />
             </font>
@@ -119,7 +119,7 @@
                 <FontIcon iconColor="#28b4d3" iconLiteral="fa-refresh" iconSize="25" />
             </graphic>
         </JFXButton>
-        <JFXButton contentDisplay="TOP" layoutX="230.0" layoutY="219.0" prefHeight="75.0" prefWidth="154.0" style="-fx-background-color: #ffffff;" text="Oferecer carona" textFill="#28b4d3">
+        <JFXButton contentDisplay="TOP" layoutX="230.0" layoutY="219.0" onAction="#oferecerCarona" prefHeight="75.0" prefWidth="154.0" style="-fx-background-color: #ffffff;" text="Oferecer carona" textFill="#28b4d3">
             <font>
                 <Font name="CoolveticaRg-Regular" size="17.0" />
             </font>
