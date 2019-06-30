@@ -2,11 +2,13 @@ package br.ufop.brTomaz.controller;
 
 import br.ufop.brTomaz.MainApplication;
 import br.ufop.brTomaz.model.bean.Carona;
+import br.ufop.brTomaz.model.bean.Recebe_Carona;
 import br.ufop.brTomaz.model.dao.CaronaDAO;
-import br.ufop.brTomaz.model.dao.CarroDAO;
+import br.ufop.brTomaz.model.dao.Recebe_CaronaDAO;
+import br.ufop.brTomaz.util.Operations;
 import com.jfoenix.controls.JFXAutoCompletePopup;
-import com.jfoenix.controls.JFXListCell;
 import com.jfoenix.controls.JFXTextField;
+import javafx.beans.property.BooleanProperty;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -19,6 +21,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
+
+import static br.ufop.brTomaz.MainApplication.*;
 
 public class FXMLPesquisarCaronaController implements Initializable {
 
@@ -131,17 +135,54 @@ public class FXMLPesquisarCaronaController implements Initializable {
             alert.setTitle("Entrada não efetuada");
             alert.setContentText("Não foi possível cadastrar-se nesta carona. O carro está cheio.");
             alert.show();
-            MainApplication.setScreen(Screen.HOME_PASSAGEIRO);
+            setScreen(Screen.HOME_PASSAGEIRO);
         }
         else
         {
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Entrada efetuada com sucesso");
-            alert.setContentText("Você foi registrado nesta carona.");
-            alert.showAndWait();
             CaronaDAO novaCaronaDAO = new CaronaDAO();
+            Recebe_Carona recebeCarona = new Recebe_Carona(idCarona, idCaronaPassageiro, usuarioCorrente.getCpf());
+            Recebe_CaronaDAO recebeCaronaDAO = new Recebe_CaronaDAO();
+            boolean ok = recebeCaronaDAO.save(recebeCarona);
+            if(ok)
+            {
+                idCaronaPassageiro++;
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Entrada efetuada com sucesso");
+                alert.setContentText("Você foi registrado nesta carona.");
+                alert.showAndWait();
+            }
             novaCaronaDAO.modificarQuantidadeVagasAtual(carona);
-            MainApplication.setScreen(Screen.HOME_PASSAGEIRO);
+            setScreen(Screen.HOME_PASSAGEIRO);
         }
+    }
+
+    @FXML
+    private void home() throws IOException {
+        Operations.home();
+    }
+
+    @FXML
+    private void caronas() throws IOException {
+        Operations.caronas();
+    }
+
+    @FXML
+    private void cadastro() throws IOException {
+        Operations.cadastro();
+    }
+
+    @FXML
+    private void historico() throws IOException {
+        Operations.historico();
+    }
+
+    @FXML
+    private void deletar() throws IOException {
+        Operations.deletar();
+    }
+
+    @FXML
+    private void sair() throws IOException {
+        Operations.sair();
     }
 }

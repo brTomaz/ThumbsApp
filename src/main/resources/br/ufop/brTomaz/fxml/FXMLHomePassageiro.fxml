@@ -26,7 +26,7 @@
                   <Line endX="100.0" layoutX="116.0" layoutY="100.0" startX="-100.0" stroke="WHITE" />
                </children>
             </Pane>
-            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" prefHeight="39.0" prefWidth="239.0" style="-fx-background-color: #138DA9;" styleClass="center-button" text="Home" textFill="WHITE">
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" onAction="#home" prefHeight="39.0" prefWidth="239.0" style="-fx-background-color: #138DA9;" styleClass="center-button" text="Home" textFill="WHITE">
                <font>
                   <Font name="Carlito Bold" size="14.0" />
                </font>
@@ -37,7 +37,7 @@
                   <Insets bottom="10.0" left="50.0" top="10.0" />
                </padding>
             </JFXButton>
-            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" prefHeight="39.0" prefWidth="239.0" style="-fx-background-color: #138DA9;" styleClass="center-button" text="Caronas" textFill="WHITE">
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" onAction="#caronas" prefHeight="39.0" prefWidth="239.0" style="-fx-background-color: #138DA9;" styleClass="center-button" text="Caronas" textFill="WHITE">
                <font>
                   <Font name="Carlito Bold" size="14.0" />
                </font>
@@ -48,7 +48,7 @@
                   <Insets bottom="10.0" left="50.0" top="10.0" />
                </padding>
             </JFXButton>
-            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" prefHeight="39.0" prefWidth="239.0" style="-fx-background-color: #138DA9;" styleClass="center-button" text="Cadastro" textFill="WHITE">
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" onAction="#cadastro" prefHeight="39.0" prefWidth="239.0" style="-fx-background-color: #138DA9;" styleClass="center-button" text="Cadastro" textFill="WHITE">
                <font>
                   <Font name="Carlito Bold" size="14.0" />
                </font>
@@ -59,7 +59,7 @@
                   <Insets bottom="10.0" left="50.0" top="10.0" />
                </padding>
             </JFXButton>
-            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" prefHeight="28.0" prefWidth="239.0" style="-fx-background-color: #138DA9;" styleClass="center-button" text="Histórico" textFill="WHITE">
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" onAction="#historico" prefHeight="28.0" prefWidth="239.0" style="-fx-background-color: #138DA9;" styleClass="center-button" text="Histórico" textFill="WHITE">
                <font>
                   <Font name="Carlito Bold" size="14.0" />
                </font>
@@ -70,7 +70,7 @@
                   <Insets bottom="10.0" left="50.0" top="10.0" />
                </padding>
             </JFXButton>
-            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" prefHeight="28.0" prefWidth="239.0" style="-fx-background-color: #138DA9;" styleClass="center-button" text="Excluir conta" textFill="WHITE">
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" onAction="#deletar" prefHeight="28.0" prefWidth="239.0" style="-fx-background-color: #138DA9;" styleClass="center-button" text="Excluir conta" textFill="WHITE">
                <font>
                   <Font name="Carlito Bold" size="14.0" />
                </font>
@@ -81,7 +81,7 @@
                   <Insets bottom="10.0" left="50.0" top="10.0" />
                </padding>
             </JFXButton>
-            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" prefHeight="28.0" prefWidth="239.0" style="-fx-background-color: #138DA9;" styleClass="center-button" text="Sair" textFill="WHITE">
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" onAction="#sair" prefHeight="28.0" prefWidth="239.0" style="-fx-background-color: #138DA9;" styleClass="center-button" text="Sair" textFill="WHITE">
                <font>
                   <Font name="Carlito Bold" size="14.0" />
                </font>

@@ -21,7 +21,7 @@ public enum Screen {
 
     public String getFXMLPath()
     {
-        String separator = System.getProperty("file.separator");
+        String separator = "/";
         return separator
                 .concat("br")
                 .concat(separator)

@@ -4,6 +4,7 @@ import br.ufop.brTomaz.MainApplication;
 import br.ufop.brTomaz.model.bean.Usuario;
 import br.ufop.brTomaz.model.dao.UsuarioDAO;
 import br.ufop.brTomaz.util.MaskFieldUtil;
+import br.ufop.brTomaz.util.Operations;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
@@ -12,6 +13,7 @@ import javafx.beans.property.SimpleBooleanProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
+import javafx.scene.control.TextInputDialog;
 
 import java.io.IOException;
 import java.net.URL;
@@ -89,4 +91,36 @@ public class FXMLAlterarDadosController implements Initializable {
             alert.show();
         }
     }
+
+    @FXML
+    private void home() throws IOException {
+        Operations.home();
+    }
+
+    @FXML
+    private void caronas() throws IOException {
+        Operations.caronas();
+    }
+
+    @FXML
+    private void cadastro() throws IOException {
+        Operations.cadastro();
+    }
+
+    @FXML
+    private void historico() throws IOException {
+        Operations.historico();
+    }
+
+    @FXML
+    private void deletar() throws IOException {
+        Operations.deletar();
+    }
+
+
+    @FXML
+    private void sair() throws IOException {
+        Operations.sair();
+    }
+
 }

@@ -16,6 +16,7 @@ public class MainApplication extends Application {
     private static Stage stage;
     public static Usuario usuarioCorrente;
     public static int idCarona;
+    public static int idCaronaPassageiro;
 
     public static void closeApplication()
     {
@@ -40,7 +41,7 @@ public class MainApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        idCarona = 1;
+        idCaronaPassageiro = idCarona = 1;
         stage = primaryStage;
         setScreen(Screen.LOGIN);
     }

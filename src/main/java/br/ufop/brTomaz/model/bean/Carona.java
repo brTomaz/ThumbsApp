@@ -121,6 +121,11 @@ public class Carona {
     @Override
     public String toString()
     {
-        return "Dia: " + getDia() + "  --  Horário: " + getHorario() + "  --  Carro: " + getPlaca_carro() + "  --  Vagas: " + getQuantidade_atual();
+        return "Dia: " + getDia() + "   ---   Horário: " + getHorario() + "   ---   Carro: " + getPlaca_carro() + "   ---   Vagas: " + getQuantidade_atual();
+    }
+
+    public String stringHistorico()
+    {
+        return "Dia: " + getDia() + "   ---   Horário: " + getHorario() + "   ---   Carro: " + getPlaca_carro();
     }
 }

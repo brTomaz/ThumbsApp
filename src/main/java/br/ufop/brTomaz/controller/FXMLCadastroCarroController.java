@@ -4,6 +4,7 @@ import br.ufop.brTomaz.model.bean.Carro;
 import br.ufop.brTomaz.model.dao.CarroDAO;
 import br.ufop.brTomaz.util.CarroUtils;
 import br.ufop.brTomaz.util.Marca;
+import br.ufop.brTomaz.util.Operations;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXListView;
@@ -199,5 +200,36 @@ public class FXMLCadastroCarroController implements Initializable {
         cmbCor.getSelectionModel().clearSelection();
         cmbModelo.getSelectionModel().clearSelection();
         cmbMarca.getSelectionModel().clearSelection();
+    }
+
+    @FXML
+    private void home() throws IOException {
+        Operations.home();
+    }
+
+    @FXML
+    private void caronas() throws IOException {
+        Operations.caronas();
+    }
+
+    @FXML
+    private void cadastro() throws IOException {
+        Operations.cadastro();
+    }
+
+    @FXML
+    private void historico() throws IOException {
+        Operations.historico();
+    }
+
+    @FXML
+    private void deletar() throws IOException {
+        Operations.deletar();
+    }
+
+
+    @FXML
+    private void sair() throws IOException {
+        Operations.sair();
     }
 }
