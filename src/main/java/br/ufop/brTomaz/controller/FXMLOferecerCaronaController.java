@@ -27,7 +27,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
-import static br.ufop.brTomaz.MainApplication.idCarona;
 import static br.ufop.brTomaz.MainApplication.usuarioCorrente;
 
 public class FXMLOferecerCaronaController implements Initializable {
@@ -118,12 +117,15 @@ public class FXMLOferecerCaronaController implements Initializable {
         int vagas = cmbQuantidade.getSelectionModel().getSelectedItem();
         String placa_carro = listViewCarros.getSelectionModel().getSelectedItem().getPlaca();
 
+        CaronaDAO caronaDAO = new CaronaDAO();
+        List<Carona> caronaList = caronaDAO.findAll();
+        int idCarona = caronaList.size() + 1;
+
         Carona carona = new Carona(idCarona, origem, destino, dia, hora, valor, vagas, 0, placa_carro, usuarioCorrente.getCpf());
 
         Boolean ok = new CaronaDAO().save(carona);
 
         if (ok) {
-            idCarona++;
             MainApplication.setScreen(Screen.HOME_MOTORISTA);
         } else {
             Alert alert = new Alert(Alert.AlertType.ERROR);

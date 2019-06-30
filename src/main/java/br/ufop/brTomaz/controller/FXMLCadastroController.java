@@ -156,9 +156,11 @@ public class FXMLCadastroController implements Initializable {
         Boolean ok = new UsuarioDAO().save(usuario);
 
         if (ok) {
-            //MainApplication.setScreen(Screen.HOME_PASSAGEIRO);
+            MainApplication.setScreen(Screen.HOME_PASSAGEIRO);
         } else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Erro");
+            alert.setContentText("Não foi possível realizar o cadastro.");
             alert.show();
         }
     }

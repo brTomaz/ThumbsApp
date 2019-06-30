@@ -139,19 +139,29 @@ public class FXMLPesquisarCaronaController implements Initializable {
         }
         else
         {
-            CaronaDAO novaCaronaDAO = new CaronaDAO();
-            Recebe_Carona recebeCarona = new Recebe_Carona(idCarona, idCaronaPassageiro, usuarioCorrente.getCpf());
+            CaronaDAO caronaDAO = new CaronaDAO();
+            List<Carona> caronaList = caronaDAO.findAll();
+            int idCarona = caronaList.size() + 1;
+
             Recebe_CaronaDAO recebeCaronaDAO = new Recebe_CaronaDAO();
-            boolean ok = recebeCaronaDAO.save(recebeCarona);
+            List<Recebe_Carona> recebeCaronaList = recebeCaronaDAO.findAll();
+            int idCaronaPassageiro = recebeCaronaList.size() + 1;
+
+            Recebe_Carona recebeCarona = new Recebe_Carona(idCarona, idCaronaPassageiro, usuarioCorrente.getCpf());
+            Recebe_CaronaDAO salvarCaronaDAO = new Recebe_CaronaDAO();
+            boolean ok = salvarCaronaDAO.save(recebeCarona);
             if(ok)
             {
-                idCaronaPassageiro++;
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Entrada efetuada com sucesso");
                 alert.setContentText("Você foi registrado nesta carona.");
                 alert.showAndWait();
             }
+
+            CaronaDAO novaCaronaDAO = new CaronaDAO();
+
             novaCaronaDAO.modificarQuantidadeVagasAtual(carona);
+
             setScreen(Screen.HOME_PASSAGEIRO);
         }
     }
