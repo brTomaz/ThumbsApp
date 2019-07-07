@@ -1,0 +1,10 @@
+.center-button{
+    -fx-effect: none;
+    -fx-border-style: solid;
+    -fx-border-color: #138DA9;
+}
+.motorista-button{
+    -fx-effect: none;
+    -fx-border-style: solid;
+    -fx-border-color: #ffffff;
+}

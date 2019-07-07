@@ -23,6 +23,7 @@ import jfxtras.scene.control.LocalTimeTextField;
 
 import java.io.IOException;
 import java.net.URL;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -154,7 +155,7 @@ public class FXMLOferecerCaronaController implements Initializable {
     }
 
     @FXML
-    private void deletar() throws IOException {
+    private void deletar() throws IOException, NoSuchAlgorithmException {
         Operations.deletar();
     }
 

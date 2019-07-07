@@ -25,6 +25,7 @@ import javafx.util.Duration;
 
 import java.io.IOException;
 import java.net.URL;
+import java.security.NoSuchAlgorithmException;
 import java.util.ResourceBundle;
 
 public class FXMLCadastroController implements Initializable {
@@ -205,7 +206,7 @@ public class FXMLCadastroController implements Initializable {
     }
 
     @FXML
-    private void deletar() throws IOException {
+    private void deletar() throws IOException, NoSuchAlgorithmException {
         Operations.deletar();
     }
 

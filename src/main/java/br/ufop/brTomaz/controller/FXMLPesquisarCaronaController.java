@@ -19,6 +19,7 @@ import javafx.util.Callback;
 
 import java.io.IOException;
 import java.net.URL;
+import java.security.NoSuchAlgorithmException;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -187,7 +188,7 @@ public class FXMLPesquisarCaronaController implements Initializable {
     }
 
     @FXML
-    private void deletar() throws IOException {
+    private void deletar() throws IOException, NoSuchAlgorithmException {
         Operations.deletar();
     }
 

@@ -17,10 +17,10 @@ import java.sql.SQLException;
  */
 public class ConnectionFactory {
     
-    private static final String DRIVER = "com.mysql.jdbc.Driver";
-    private static final String URL = "jdbc:mysql://localhost:3306/db_carona";
+    private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
+    private static final String URL = "jdbc:mysql://localhost:3306/db_carona?useTimezone=true&serverTimezone=UTC";
     private static final String USER = "root";
-    private static final String PASS = "";
+    private static final String PASS = "YES";
     
     public static Connection getConnection(){
         
@@ -30,7 +30,9 @@ public class ConnectionFactory {
             return DriverManager.getConnection(URL, USER, PASS);
             
         } catch (ClassNotFoundException | SQLException ex) {
-           throw new RuntimeException("Erro na conexão", ex);
+            ex.printStackTrace();
+            throw new RuntimeException("Erro na conexão", ex);
+
         }
         
     }

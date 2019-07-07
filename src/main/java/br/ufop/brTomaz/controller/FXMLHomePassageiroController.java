@@ -8,6 +8,7 @@ import javafx.fxml.Initializable;
 
 import java.io.IOException;
 import java.net.URL;
+import java.security.NoSuchAlgorithmException;
 import java.util.ResourceBundle;
 
 public class FXMLHomePassageiroController implements Initializable {
@@ -51,7 +52,7 @@ public class FXMLHomePassageiroController implements Initializable {
     }
 
     @FXML
-    private void deletar() throws IOException {
+    private void deletar() throws IOException, NoSuchAlgorithmException {
         Operations.deletar();
     }
 

@@ -2,6 +2,7 @@ package br.ufop.brTomaz.controller;
 
 import br.ufop.brTomaz.MainApplication;
 import br.ufop.brTomaz.model.dao.UsuarioDAO;
+import br.ufop.brTomaz.security.SegurancaSistema;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
@@ -69,7 +70,7 @@ public class FXMLLoginController implements Initializable {
 
         if(usuarioCorrente != null)
         {
-            permission.setValue(usuarioCorrente.getSenha().equals(senha));
+            permission.setValue(usuarioCorrente.getSenha().equals(SegurancaSistema.criptografarSenha(senha)));
             tries.set(tries.getValue() - 1);
         }
         else

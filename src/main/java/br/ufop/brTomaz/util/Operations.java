@@ -4,25 +4,28 @@ import br.ufop.brTomaz.MainApplication;
 import br.ufop.brTomaz.controller.Screen;
 import br.ufop.brTomaz.model.bean.Usuario;
 import br.ufop.brTomaz.model.dao.UsuarioDAO;
+import br.ufop.brTomaz.security.SegurancaSistema;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextInputDialog;
 
 import java.io.IOException;
+import java.security.NoSuchAlgorithmException;
 
 import static br.ufop.brTomaz.MainApplication.usuarioCorrente;
 
 public class Operations {
 
     @FXML
-    public static void deletar() throws IOException {
+    public static void deletar() throws IOException, NoSuchAlgorithmException {
         TextInputDialog textInputDialog = new TextInputDialog();
         textInputDialog.setTitle("Deseja realmente excluir a sua conta?");
         textInputDialog.setContentText("Esta é uma ação irreversível. Digite a sua senha para continuar:");
         textInputDialog.showAndWait();
         String senha = textInputDialog.getResult();
 
-        if(senha.equals(usuarioCorrente.getSenha()))
+
+        if(SegurancaSistema.criptografarSenha(senha).equals(usuarioCorrente.getSenha()))
         {
             Usuario usuario = usuarioCorrente;
             UsuarioDAO usuarioDAO = new UsuarioDAO();

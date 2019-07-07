@@ -3,6 +3,7 @@ package br.ufop.brTomaz.controller;
 import br.ufop.brTomaz.MainApplication;
 import br.ufop.brTomaz.model.bean.Usuario;
 import br.ufop.brTomaz.model.dao.UsuarioDAO;
+import br.ufop.brTomaz.security.SegurancaSistema;
 import br.ufop.brTomaz.util.MaskFieldUtil;
 import br.ufop.brTomaz.util.Operations;
 import com.jfoenix.controls.JFXButton;
@@ -17,6 +18,7 @@ import javafx.scene.control.TextInputDialog;
 
 import java.io.IOException;
 import java.net.URL;
+import java.security.NoSuchAlgorithmException;
 import java.util.ResourceBundle;
 
 import static br.ufop.brTomaz.MainApplication.usuarioCorrente;
@@ -70,7 +72,7 @@ public class FXMLAlterarDadosController implements Initializable {
         String nomeUsuario = txtNomeUsuario.getText();
         String telefone = MaskFieldUtil.onlyDigitsValue(txtTelefone);
         String email = txtEmail.getText();
-        String senha = txtSenha.getText();
+        String senha = SegurancaSistema.criptografarSenha(txtSenha.getText());
 
         Usuario usuario = new Usuario(usuarioCorrente.getCpf(), nome, email, null, senha, telefone, nomeUsuario);
 
@@ -113,7 +115,7 @@ public class FXMLAlterarDadosController implements Initializable {
     }
 
     @FXML
-    private void deletar() throws IOException {
+    private void deletar() throws IOException , NoSuchAlgorithmException {
         Operations.deletar();
     }
 
