@@ -8,20 +8,16 @@ import br.ufop.brTomaz.util.Operations;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
-import javafx.animation.FadeTransition;
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextInputDialog;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
-import javafx.util.Duration;
 
 import java.io.IOException;
 import java.net.URL;
@@ -61,6 +57,8 @@ public class FXMLCadastroController implements Initializable {
 
     @FXML
     private JFXButton btnMotorista;
+
+
 
     @FXML
     private void enviar() throws IOException {
@@ -163,25 +161,6 @@ public class FXMLCadastroController implements Initializable {
             alert.setContentText("Não foi possível realizar o cadastro.");
             alert.show();
         }
-    }
-
-    private void transition(Pane show, Pane hide) {
-        FadeTransition transition = new FadeTransition();
-        transition.setNode(show);
-        transition.setDuration(Duration.seconds(1));
-        transition.setFromValue(1.0);
-        transition.setToValue(0.0);
-        transition.setOnFinished(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                FadeTransition fadeIn = new FadeTransition(Duration.seconds(1), hide);
-                fadeIn.setFromValue(0.0);
-                fadeIn.setToValue(1.0);
-                fadeIn.play();
-            }
-        });
-        transition.play();
-        hide.toFront();
     }
 
     @FXML

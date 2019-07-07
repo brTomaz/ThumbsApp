@@ -10,7 +10,8 @@ public enum Screen {
     CADASTRO_CARRO("FXMLCadastroCarro.fxml"),
     OFERECER_CARONA("FXMLOferecerCarona.fxml"),
     OPCAO_CADASTRO("FXMLOpcaoCadastro.fxml"),
-    PESQUISAR_CARONA("FXMLPesquisarCarona.fxml");
+    PESQUISAR_CARONA("FXMLPesquisarCarona.fxml"),
+    ADMINISTRADOR("FXMLAdministrador.fxml");
 
     private final String fxmlName;
 

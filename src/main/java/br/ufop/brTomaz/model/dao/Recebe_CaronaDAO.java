@@ -21,15 +21,15 @@ import java.util.List;
  * @author Usuario
  */
 public class Recebe_CaronaDAO {
-        private Connection con = null;
+    private Connection con = null;
 
     public Recebe_CaronaDAO() {
         con = ConnectionFactory.getConnection();
     }
-    
+
     public boolean save(Recebe_Carona r_carona){
-        
-        String sql = "INSERT INTO recebe_carona (id_carona, id_caronaPassageiro, cpf_passageiro) VALUES (?, ?, ?)";
+
+        String sql = "INSERT INTO recebe_carona (id_carona, cpf_passageiro) VALUES (?, ?)";
 
         return statementExecute(r_carona, sql);
     }
@@ -52,7 +52,6 @@ public class Recebe_CaronaDAO {
                 Recebe_Carona carona_recebida = new Recebe_Carona();
 
                 carona_recebida.setId_carona(rs.getInt("id_carona"));
-                carona_recebida.setId_caronaPassageiro(rs.getInt("id_caronaPassageiro"));
                 carona_recebida.setCpf_passageiro(rs.getString("cpf_passageiro"));
                 caronas_recebidas.add(carona_recebida);
             }
@@ -78,25 +77,24 @@ public class Recebe_CaronaDAO {
 
         return caronas;
     }
-    
+
     public List<Recebe_Carona> findAll(){
-        
+
         String sql = "SELECT * FROM recebe_carona";
-        
+
         PreparedStatement stmt = null;
         ResultSet rs = null;
-        
+
         List<Recebe_Carona> caronas_recebidas = new ArrayList<>();
-        
+
         try {
             stmt = con.prepareStatement(sql);
             rs = stmt.executeQuery();
             while(rs.next()){
-                
+
                 Recebe_Carona carona_recebida = new Recebe_Carona();
-                
+
                 carona_recebida.setId_carona(rs.getInt("id_carona"));
-                carona_recebida.setId_caronaPassageiro(rs.getInt("id_caronaPassageiro"));
                 carona_recebida.setCpf_passageiro(rs.getString("cpf_passageiro"));
 
                 caronas_recebidas.add(carona_recebida);
@@ -106,11 +104,11 @@ public class Recebe_CaronaDAO {
         }finally{
             ConnectionFactory.closeConnection(con, stmt, rs);
         }
-        return caronas_recebidas; 
+        return caronas_recebidas;
     }
- 
+
     public boolean delete(Recebe_Carona carona_recebida){
-        
+
         String sql = "DELETE FROM recebe_carona WHERE idcar = ? and pcpf = ?";
 
         return statementExecute(carona_recebida, sql);
@@ -122,8 +120,7 @@ public class Recebe_CaronaDAO {
         try {
             stmt = con.prepareStatement(sql);
             stmt.setInt(1, carona_recebida.getId_carona());
-            stmt.setInt(2, carona_recebida.getId_caronaPassageiro());
-            stmt.setString(3, carona_recebida.getCpf_passageiro());
+            stmt.setString(2, carona_recebida.getCpf_passageiro());
             stmt.executeUpdate();
             return true;
         } catch (SQLException ex) {

@@ -5,6 +5,8 @@
  */
 package br.ufop.brTomaz.model.bean;
 
+import br.ufop.brTomaz.model.dao.CarroDAO;
+import br.ufop.brTomaz.model.interfaces.Deletavel;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -14,7 +16,7 @@ import javafx.beans.property.StringProperty;
  *
  * @author Usuario
  */
-public class Carro {
+public class Carro implements Deletavel {
     
     private StringProperty placa = new SimpleStringProperty();
     private StringProperty cor = new SimpleStringProperty();
@@ -38,7 +40,7 @@ public class Carro {
     @Override
     public String toString()
     {
-        return getPlaca();
+        return "Modelo: " + getModelo() + " | Placa: " + getPlaca();
     }
 
     public String getPlaca() {
@@ -113,4 +115,9 @@ public class Carro {
         this.cpf_dono.set(cpf_dono);
     }
 
+    @Override
+    public void deletar() {
+        CarroDAO carroDAO = new CarroDAO();
+        carroDAO.delete(this);
+    }
 }

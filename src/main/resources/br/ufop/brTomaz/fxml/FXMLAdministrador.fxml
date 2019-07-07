@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="638.0" style="-fx-background-color: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufop.brTomaz.controller.FXMLAdministradorController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="229.0" layoutY="41.0" prefHeight="31.0" prefWidth="409.0" text="Administrador" textFill="WHITE">
+         <font>
+            <Font name="CoolveticaRg-Regular" size="25.0" />
+         </font>
+      </Label>
+      <VBox prefHeight="400.0" prefWidth="231.0" style="-fx-background-color: #138DA9;">
+         <children>
+            <Pane prefHeight="144.0" prefWidth="231.0">
+               <children>
+                  <Text fill="WHITE" layoutX="70.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ThumbsApp">
+                     <font>
+                        <Font name="Osaka Mustache - Personal Use" size="50.0" />
+                     </font>
+                  </Text>
+                  <FontIcon iconColor="WHITE" iconLiteral="fa-thumbs-up" iconSize="33" layoutX="30.0" layoutY="78.0" rotate="-35.0" wrappingWidth="13.0" />
+                  <Line endX="100.0" layoutX="116.0" layoutY="100.0" startX="-100.0" stroke="WHITE" />
+               </children>
+            </Pane>
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" onAction="#carros" prefHeight="39.0" prefWidth="239.0" style="-fx-background-color: #138DA9;" styleClass="center-button" text="Carros" textFill="WHITE">
+               <font>
+                  <Font name="Carlito Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <FontIcon iconColor="WHITE" iconLiteral="fa-car" iconSize="17" />
+               </graphic>
+               <padding>
+                  <Insets bottom="10.0" left="50.0" top="10.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" onAction="#motoristas" prefHeight="39.0" prefWidth="239.0" style="-fx-background-color: #138DA9;" styleClass="center-button" text="Motoristas" textFill="WHITE">
+               <font>
+                  <Font name="Carlito Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <FontIcon iconColor="WHITE" iconLiteral="fa-id-card" />
+               </graphic>
+               <padding>
+                  <Insets bottom="10.0" left="50.0" top="10.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" onAction="#caronas" prefHeight="39.0" prefWidth="239.0" style="-fx-background-color: #138DA9;" styleClass="center-button" text="Caronas" textFill="WHITE">
+               <font>
+                  <Font name="Carlito Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <FontIcon iconColor="WHITE" iconLiteral="fa-flag-checkered" />
+               </graphic>
+               <padding>
+                  <Insets bottom="10.0" left="50.0" top="10.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" onAction="#passageiros" prefHeight="28.0" prefWidth="239.0" style="-fx-background-color: #138DA9;" styleClass="center-button" text="Passageiros" textFill="WHITE">
+               <font>
+                  <Font name="Carlito Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <FontIcon iconColor="WHITE" iconLiteral="fa-user-o" />
+               </graphic>
+               <padding>
+                  <Insets bottom="10.0" left="50.0" top="10.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" onAction="#sair" prefHeight="28.0" prefWidth="239.0" style="-fx-background-color: #138DA9;" styleClass="center-button" text="Sair" textFill="WHITE">
+               <font>
+                  <Font name="Carlito Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <FontIcon iconColor="WHITE" iconLiteral="fa-sign-out" />
+               </graphic>
+               <padding>
+                  <Insets bottom="10.0" left="50.0" top="10.0" />
+               </padding>
+            </JFXButton>
+         </children>
+      </VBox>
+      <JFXListView fx:id="listViewItens" layoutX="244.0" layoutY="104.0" prefHeight="237.0" prefWidth="381.0" AnchorPane.leftAnchor="244.0" AnchorPane.rightAnchor="13.0" />
+      <Label layoutX="418.0" layoutY="84.0" text="Lista" textFill="WHITE">
+         <font>
+            <Font name="CoolveticaRg-Regular" size="15.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="delete" layoutX="382.0" layoutY="354.0" onAction="#deletar" prefHeight="30.0" prefWidth="105.0" style="-fx-border-color: #a40d74;" text="Deletar" textFill="#a40d74">
+         <font>
+            <Font name="CoolveticaRg-Regular" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

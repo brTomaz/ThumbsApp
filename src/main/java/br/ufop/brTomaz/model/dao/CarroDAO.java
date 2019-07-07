@@ -63,21 +63,9 @@ public class CarroDAO {
         try {
             stmt = con.prepareStatement(sql);
             rs = stmt.executeQuery();
-            while(rs.next()){
-                
-                Carro carro = new Carro();
-                
-                carro.setPlaca(rs.getString("placa"));
-                carro.setCor(rs.getString("cor"));
-                carro.setModelo(rs.getString("modelo"));
-                carro.setMarca(rs.getString("marca"));
-                carro.setAno(rs.getInt("ano"));
-                carro.setCpf_dono(rs.getString("cpf_dono"));
-                
-                carros.add(carro);
-            }
+            setCarro(rs, carros);
         } catch (SQLException ex) {
-            System.err.println("Erro :"+ex);
+            System.err.println("Erro :" + ex);
         }finally{
             ConnectionFactory.closeConnection(con, stmt, rs);
         }
@@ -97,25 +85,29 @@ public class CarroDAO {
             stmt = con.prepareStatement(sql);
             stmt.setString(1, cpf);
             rs = stmt.executeQuery();
-            while(rs.next()){
-                
-                Carro carro = new Carro();
-                
-                carro.setPlaca(rs.getString("placa"));
-                carro.setCor(rs.getString("cor"));
-                carro.setModelo(rs.getString("modelo"));
-                carro.setMarca(rs.getString("marca"));
-                carro.setAno(rs.getInt("ano"));
-                carro.setCpf_dono(rs.getString("cpf_dono"));
-                
-                carros.add(carro);
-            }
+            setCarro(rs, carros);
         } catch (SQLException ex) {
-            System.err.println("Erro :"+ex);
+            System.err.println("Erro :" + ex);
         }finally{
             ConnectionFactory.closeConnection(con, stmt, rs);
         }
         return carros; 
+    }
+
+    private void setCarro(ResultSet rs, List<Carro> carros) throws SQLException {
+        while(rs.next()){
+
+            Carro carro = new Carro();
+
+            carro.setPlaca(rs.getString("placa"));
+            carro.setCor(rs.getString("cor"));
+            carro.setModelo(rs.getString("modelo"));
+            carro.setMarca(rs.getString("marca"));
+            carro.setAno(rs.getInt("ano"));
+            carro.setCpf_dono(rs.getString("cpf_dono"));
+
+            carros.add(carro);
+        }
     }
 
     public Carro retrieveCarro(String placa) {
@@ -160,7 +152,7 @@ public class CarroDAO {
             stmt.executeUpdate();
             return true;
         } catch (SQLException ex) {
-            System.err.println("Erro: "+ex);
+            System.err.println("Erro: " + ex);
             return false;
         }finally{
             ConnectionFactory.closeConnection(con, stmt);

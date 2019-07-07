@@ -203,6 +203,5 @@ public class CaronaDAO {
         } finally {
             ConnectionFactory.closeConnection(con, stmt);
         }
-
     }
 }

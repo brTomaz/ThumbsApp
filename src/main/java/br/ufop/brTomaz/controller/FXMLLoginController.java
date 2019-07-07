@@ -5,6 +5,7 @@ import br.ufop.brTomaz.model.dao.UsuarioDAO;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
+import com.sun.tools.javac.Main;
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleBooleanProperty;
@@ -87,5 +88,10 @@ public class FXMLLoginController implements Initializable {
     @FXML
     private void cadastrar() throws IOException {
         MainApplication.setScreen(Screen.CADASTRO);
+    }
+
+    @FXML
+    private void administrador() throws IOException {
+        MainApplication.setScreen(Screen.ADMINISTRADOR);
     }
 }

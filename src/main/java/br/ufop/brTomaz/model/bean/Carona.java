@@ -5,11 +5,14 @@
  */
 package br.ufop.brTomaz.model.bean;
 
+import br.ufop.brTomaz.model.dao.CaronaDAO;
+import br.ufop.brTomaz.model.interfaces.Deletavel;
+
 /**
  *
  * @author Usuario
  */
-public class Carona {
+public class Carona implements Deletavel {
     private int idcarona;
     private String origem;
     private String destino;
@@ -127,5 +130,11 @@ public class Carona {
     public String stringHistorico()
     {
         return "Dia: " + getDia() + "   ---   Horário: " + getHorario() + "   ---   Carro: " + getPlaca_carro();
+    }
+
+    @Override
+    public void deletar() {
+        CaronaDAO caronaDAO = new CaronaDAO();
+        caronaDAO.delete(this);
     }
 }

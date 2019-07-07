@@ -142,7 +142,6 @@ public class FXMLCadastroCarroController implements Initializable {
         carros = carrosUsuario.search(usuarioCorrente.getCpf());
 
         listViewCarros.setItems(FXCollections.observableList(carros));
-        Carro carro = listViewCarros.getSelectionModel().getSelectedItem();
     }
 
     private void carregarModelos(Marca marca){

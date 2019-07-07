@@ -5,11 +5,14 @@
  */
 package br.ufop.brTomaz.model.bean;
 
+import br.ufop.brTomaz.model.dao.UsuarioDAO;
+import br.ufop.brTomaz.model.interfaces.Deletavel;
+
 /**
  *
  * @author Usuario
  */
-public class Usuario {
+public class Usuario implements Deletavel {
     
     private String cpf;
     private String nome;
@@ -19,7 +22,7 @@ public class Usuario {
     private String telefone;
     private String nomeDeUsuario;
 
-    public Usuario() {
+    public Usuario(){
     }
 
     public Usuario(String cpf, String nome, String email, String cnh, String senha, String telefone, String nomeDeUsuario) {
@@ -35,6 +38,9 @@ public class Usuario {
     public String getNomeDeUsuario() { return nomeDeUsuario; }
     public void setNomeDeUsuario(String nomeDeUsuario) { this.nomeDeUsuario = nomeDeUsuario; }
 
+    public String toString() {
+        return "Nome: " + getNome();
+    }
     public String getCpf() {
         return cpf;
     }
@@ -81,5 +87,11 @@ public class Usuario {
 
     public void setTelefone(String telefone) {
         this.telefone = telefone;
+    }
+
+    @Override
+    public void deletar() {
+        UsuarioDAO usuarioDAO = new UsuarioDAO();
+        usuarioDAO.delete(this);
     }
 }
