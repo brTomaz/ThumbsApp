@@ -1,0 +1,29 @@
+.center-button{
+    -fx-effect: none;
+    -fx-border-style: solid;
+    -fx-border-color: #138DA9;
+}
+.motorista-button{
+    -fx-effect: none;
+    -fx-border-style: solid;
+    -fx-border-color: #ffffff;
+}
+
+.jfx-text-field, .jfx-password-field{
+    -fx-prompt-text-fill: rgba(128, 128, 128, 0.64);
+}
+
+.combo-box {
+    -fx-font-family: CoolveticaRg-Regular;
+    -fx-font-size: 15.0;
+}
+
+.date-picker {
+    -fx-font-family: CoolveticaRg-Regular;
+    -fx-font-size: 15.0;
+}
+.list-view {
+    -fx-font-family: CoolveticaRg-Regular;
+    -fx-font-size: 15.0;
+}
+

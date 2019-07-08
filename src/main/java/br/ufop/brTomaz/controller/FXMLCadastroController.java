@@ -21,6 +21,7 @@ import javafx.scene.layout.Pane;
 
 import java.io.IOException;
 import java.net.URL;
+import java.security.NoSuchAlgorithmException;
 import java.util.ResourceBundle;
 
 import static br.ufop.brTomaz.MainApplication.usuarioCorrente;
@@ -192,7 +193,7 @@ public class FXMLCadastroController implements Initializable {
     }
 
     @FXML
-    private void deletar() throws IOException {
+    private void deletar() throws IOException, NoSuchAlgorithmException {
         Operations.deletar();
     }
 

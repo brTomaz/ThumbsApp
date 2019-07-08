@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.ufop.brTomaz.util.CarroUtilsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-06-28T18:42:06" hostname="DESKTOP-DJ9V597" time="1.348">
+  <properties/>
+  <testcase name="testMarcas" classname="br.ufop.brTomaz.util.CarroUtilsTest" time="1.348"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

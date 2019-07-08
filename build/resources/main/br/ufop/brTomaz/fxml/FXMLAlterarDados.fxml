@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="638.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufop.brTomaz.controller.FXMLAlterarDadosController">
+      <VBox prefHeight="400.0" prefWidth="231.0" style="-fx-background-color: #138DA9;">
+         <children>
+            <Pane prefHeight="125.0" prefWidth="231.0">
+               <children>
+                  <Text fill="WHITE" layoutX="70.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ThumbsApp">
+                     <font>
+                        <Font name="Osaka Mustache - Personal Use" size="50.0" />
+                     </font>
+                  </Text>
+                  <FontIcon iconColor="WHITE" iconLiteral="fa-thumbs-up" iconSize="33" layoutX="30.0" layoutY="78.0" rotate="-35.0" wrappingWidth="13.0" />
+                  <Line endX="100.0" layoutX="116.0" layoutY="100.0" startX="-100.0" stroke="WHITE" />
+               </children>
+            </Pane>
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" onAction="#home" prefHeight="39.0" prefWidth="239.0" style="-fx-background-color: #138DA9;" styleClass="center-button" text="Home" textFill="WHITE">
+               <font>
+                  <Font name="Carlito Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <FontIcon iconColor="WHITE" iconLiteral="fa-home" iconSize="17" />
+               </graphic>
+               <padding>
+                  <Insets bottom="10.0" left="50.0" top="10.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" onAction="#caronas" prefHeight="39.0" prefWidth="239.0" style="-fx-background-color: #138DA9;" styleClass="center-button" text="Caronas" textFill="WHITE">
+               <font>
+                  <Font name="Carlito Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <FontIcon iconColor="WHITE" iconLiteral="fa-flag-checkered" />
+               </graphic>
+               <padding>
+                  <Insets bottom="10.0" left="50.0" top="10.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" onAction="#cadastro" prefHeight="39.0" prefWidth="239.0" style="-fx-background-color: #138DA9;" styleClass="center-button" text="Cadastro" textFill="WHITE">
+               <font>
+                  <Font name="Carlito Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <FontIcon iconColor="WHITE" iconLiteral="fa-user-plus" />
+               </graphic>
+               <padding>
+                  <Insets bottom="10.0" left="50.0" top="10.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" onAction="#historico" prefHeight="28.0" prefWidth="239.0" style="-fx-background-color: #138DA9;" styleClass="center-button" text="Histórico" textFill="WHITE">
+               <font>
+                  <Font name="Carlito Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <FontIcon iconColor="WHITE" iconLiteral="fa-history" />
+               </graphic>
+               <padding>
+                  <Insets bottom="10.0" left="50.0" top="10.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" onAction="#deletar" prefHeight="28.0" prefWidth="239.0" style="-fx-background-color: #138DA9;" styleClass="center-button" text="Excluir conta" textFill="WHITE">
+               <font>
+                  <Font name="Carlito Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <FontIcon iconColor="WHITE" iconLiteral="fa-user-times" />
+               </graphic>
+               <padding>
+                  <Insets bottom="10.0" left="50.0" top="10.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" onAction="#sair" prefHeight="28.0" prefWidth="239.0" style="-fx-background-color: #138DA9;" styleClass="center-button" text="Sair" textFill="WHITE">
+               <font>
+                  <Font name="Carlito Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <FontIcon iconColor="WHITE" iconLiteral="fa-sign-out" />
+               </graphic>
+               <padding>
+                  <Insets bottom="10.0" left="50.0" top="10.0" />
+               </padding>
+            </JFXButton>
+         </children>
+      </VBox>
+      <StackPane layoutX="231.0" prefHeight="400.0" prefWidth="408.0" style="-fx-background-color: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);">
+         <children>
+            <AnchorPane fx:id="dataPane" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="126.0" layoutY="14.0" prefHeight="31.0" prefWidth="158.0" text="Alterar dados" textFill="WHITE">
+                     <font>
+                        <Font name="CoolveticaRg-Regular" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="56.0" text="Nome" textFill="WHITE">
+                     <font>
+                        <Font name="CoolveticaRg-Regular" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtNome" focusColor="#138da9" layoutX="14.0" layoutY="74.0" prefHeight="28.0" prefWidth="377.0" style="-fx-background-color: #ffffff;" unFocusColor="#4d4d4d00">
+                     <font>
+                        <Font name="CoolveticaRg-Regular" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <Label layoutX="14.0" layoutY="164.0" text="Nome de usuário" textFill="WHITE">
+                     <font>
+                        <Font name="CoolveticaRg-Regular" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtNomeUsuario" focusColor="#138da9" layoutX="14.0" layoutY="182.0" prefHeight="28.0" prefWidth="377.0" style="-fx-background-color: #ffffff;" unFocusColor="#4d4d4d00" viewOrder="3.0">
+                     <font>
+                        <Font name="CoolveticaRg-Regular" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <Text fill="WHITE" layoutX="14.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha">
+                     <font>
+                        <Font name="CoolveticaRg-Regular" size="14.0" />
+                     </font>
+                  </Text>
+                  <JFXPasswordField fx:id="txtSenha" focusColor="#138da9" layoutX="14.0" layoutY="241.0" prefHeight="28.0" prefWidth="181.0" style="-fx-background-color: #ffffff;" unFocusColor="#4d4d4d00" viewOrder="4.0">
+                     <font>
+                        <Font name="CoolveticaRg-Regular" size="14.0" />
+                     </font>
+                  </JFXPasswordField>
+                  <Label layoutX="14.0" layoutY="109.0" text="E-mail" textFill="WHITE">
+                     <font>
+                        <Font name="CoolveticaRg-Regular" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtEmail" focusColor="#138da9" layoutX="14.0" layoutY="127.0" prefHeight="28.0" prefWidth="377.0" promptText="email@email.com" style="-fx-background-color: #ffffff;" unFocusColor="#4d4d4d00" viewOrder="5.0">
+                     <font>
+                        <Font name="CoolveticaRg-Regular" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <Label layoutX="232.0" layoutY="223.0" text="Telefone" textFill="WHITE">
+                     <font>
+                        <Font name="CoolveticaRg-Regular" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtTelefone" focusColor="#138da9" layoutX="233.0" layoutY="241.0" prefHeight="28.0" prefWidth="158.0" style="-fx-background-color: #ffffff;" unFocusColor="#4d4d4d00" viewOrder="6.0">
+                     <font>
+                        <Font name="CoolveticaRg-Regular" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton fx:id="btnAlterar" contentDisplay="RIGHT" layoutX="142.0" layoutY="303.0" onAction="#alterar" prefHeight="34.0" prefWidth="125.0" style="-fx-background-color: #c6369b;" text="Alterar" textFill="WHITE" viewOrder="7.0">
+                     <font>
+                        <Font name="CoolveticaRg-Regular" size="17.0" />
+                     </font>
+                     <graphic>
+                        <FontIcon iconColor="WHITE" iconLiteral="fa-pencil-square-o" iconSize="17" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+</AnchorPane>

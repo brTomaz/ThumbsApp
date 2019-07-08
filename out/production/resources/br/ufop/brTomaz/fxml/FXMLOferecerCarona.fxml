@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="638.0" style="-fx-background-color: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);;" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="231.0" style="-fx-background-color: #138DA9;">
+         <children>
+            <Pane prefHeight="125.0" prefWidth="231.0">
+               <children>
+                  <Text fill="WHITE" layoutX="70.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ThumbsApp">
+                     <font>
+                        <Font name="Osaka Mustache - Personal Use" size="50.0" />
+                     </font>
+                  </Text>
+                  <FontIcon iconColor="WHITE" iconLiteral="fa-thumbs-up" iconSize="33" layoutX="30.0" layoutY="78.0" rotate="-35.0" wrappingWidth="13.0" />
+                  <Line endX="100.0" layoutX="116.0" layoutY="100.0" startX="-100.0" stroke="WHITE" />
+               </children>
+            </Pane>
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" prefHeight="39.0" prefWidth="239.0" style="-fx-background-color: #138DA9;" styleClass="center-button" text="Home" textFill="WHITE">
+               <font>
+                  <Font name="Carlito Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <FontIcon iconColor="WHITE" iconLiteral="fa-home" iconSize="17" />
+               </graphic>
+               <padding>
+                  <Insets bottom="10.0" left="50.0" top="10.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" prefHeight="39.0" prefWidth="239.0" style="-fx-background-color: #138DA9;" styleClass="center-button" text="Caronas" textFill="WHITE">
+               <font>
+                  <Font name="Carlito Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <FontIcon iconColor="WHITE" iconLiteral="fa-flag-checkered" />
+               </graphic>
+               <padding>
+                  <Insets bottom="10.0" left="50.0" top="10.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" prefHeight="39.0" prefWidth="239.0" style="-fx-background-color: #138DA9;" styleClass="center-button" text="Cadastro" textFill="WHITE">
+               <font>
+                  <Font name="Carlito Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <FontIcon iconColor="WHITE" iconLiteral="fa-user-plus" />
+               </graphic>
+               <padding>
+                  <Insets bottom="10.0" left="50.0" top="10.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" prefHeight="28.0" prefWidth="239.0" style="-fx-background-color: #138DA9;" styleClass="center-button" text="Histórico" textFill="WHITE">
+               <font>
+                  <Font name="Carlito Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <FontIcon iconColor="WHITE" iconLiteral="fa-file-text-o" />
+               </graphic>
+               <padding>
+                  <Insets bottom="10.0" left="50.0" top="10.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" prefHeight="28.0" prefWidth="239.0" style="-fx-background-color: #138DA9;" styleClass="center-button" text="Excluir conta" textFill="WHITE">
+               <font>
+                  <Font name="Carlito Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <FontIcon iconColor="WHITE" iconLiteral="fa-user-times" />
+               </graphic>
+               <padding>
+                  <Insets bottom="10.0" left="50.0" top="10.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="15.0" prefHeight="28.0" prefWidth="239.0" style="-fx-background-color: #138DA9;" styleClass="center-button" text="Sair" textFill="WHITE">
+               <font>
+                  <Font name="Carlito Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <FontIcon iconColor="WHITE" iconLiteral="fa-chevron-left" />
+               </graphic>
+               <padding>
+                  <Insets bottom="10.0" left="50.0" top="10.0" />
+               </padding>
+            </JFXButton>
+         </children>
+      </VBox>
+      <Pane layoutX="231.0" prefHeight="400.0" prefWidth="407.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="43.0" prefHeight="31.0" prefWidth="407.0" text="Oferecer carona" textFill="WHITE">
+               <font>
+                  <Font name="CoolveticaRg-Regular" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="98.0" text="Horário" textFill="WHITE">
+               <font>
+                  <Font name="CoolveticaRg-Regular" size="14.0" />
+               </font>
+            </Label>
+            <JFXTextField focusColor="#138da9" layoutX="15.0" layoutY="115.0" prefHeight="28.0" prefWidth="132.0" style="-fx-background-color: #ffffff;" unFocusColor="#4d4d4d00">
+               <font>
+                  <Font name="CoolveticaRg-Regular" size="14.0" />
+               </font></JFXTextField>
+            <Label layoutX="15.0" layoutY="147.0" text="Origem" textFill="WHITE">
+               <font>
+                  <Font name="CoolveticaRg-Regular" size="14.0" />
+               </font>
+            </Label>
+            <JFXTextField focusColor="#138da9" layoutX="15.0" layoutY="165.0" prefHeight="28.0" prefWidth="132.0" style="-fx-background-color: #ffffff;" unFocusColor="#4d4d4d00">
+               <font>
+                  <Font name="CoolveticaRg-Regular" size="14.0" />
+               </font></JFXTextField>
+            <Label layoutX="15.0" layoutY="197.0" text="Destino" textFill="WHITE">
+               <font>
+                  <Font name="CoolveticaRg-Regular" size="14.0" />
+               </font>
+            </Label>
+            <JFXTextField focusColor="#138da9" layoutX="15.0" layoutY="215.0" prefHeight="28.0" prefWidth="132.0" style="-fx-background-color: #ffffff;" unFocusColor="#4d4d4d00">
+               <font>
+                  <Font name="CoolveticaRg-Regular" size="14.0" />
+               </font></JFXTextField>
+            <Label layoutX="15.0" layoutY="246.0" text="Quantidade de vagas" textFill="WHITE">
+               <font>
+                  <Font name="CoolveticaRg-Regular" size="14.0" />
+               </font>
+            </Label>
+            <JFXComboBox focusColor="WHITE" layoutX="15.0" layoutY="265.0" prefHeight="28.0" prefWidth="92.0" style="-fx-background-color: #ffffff;" unFocusColor="#eeeded" />
+            <JFXButton contentDisplay="RIGHT" layoutX="130.0" layoutY="320.0" prefHeight="34.0" prefWidth="149.0" style="-fx-background-color: #c6369b;" text="  Enviar" textFill="WHITE">
+               <font>
+                  <Font name="CoolveticaRg-Regular" size="17.0" />
+               </font>
+               <graphic>
+                  <FontIcon iconColor="WHITE" iconLiteral="fa-paper-plane" iconSize="17" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
