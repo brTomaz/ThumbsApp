@@ -15,6 +15,7 @@ import java.util.List;
 
 import br.ufop.brTomaz.model.bean.Recebe_Carona;
 import br.ufop.brTomaz.model.bean.Usuario;
+import br.ufop.brTomaz.security.SegurancaSistema;
 
 /**
  *
@@ -40,7 +41,7 @@ public class UsuarioDAO {
             stmt.setString(2, usuario.getNome());
             stmt.setString(3, usuario.getEmail());
             stmt.setString(4, usuario.getCnh());
-            stmt.setString(5, usuario.getSenha());
+            stmt.setString(5, SegurancaSistema.criptografarSenha(usuario.getSenha()));
             stmt.setString(6, usuario.getTelefone());
             stmt.setString(7, usuario.getNomeDeUsuario());
             stmt.executeUpdate();

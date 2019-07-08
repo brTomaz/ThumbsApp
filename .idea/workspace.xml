@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49107a38-bf09-4eb2-8729-42a63e548e6d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLAdministradorController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/interfaces/Deletavel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/security/SegurancaSistema.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
@@ -11,18 +10,19 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/connection/ConnectionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/connection/ConnectionFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLCadastroCarroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLCadastroCarroController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLAdministradorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLAdministradorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLAlterarDadosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLAlterarDadosController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLCadastroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLCadastroController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLHistoricoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLHistoricoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLHomeMotoristaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLHomeMotoristaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLLoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/Screen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLPesquisarCaronaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLPesquisarCaronaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/bean/Carona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/bean/Carona.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/bean/Carro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/bean/Carro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/bean/Recebe_Carona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/bean/Recebe_Carona.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/bean/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/bean/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/dao/CaronaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/dao/CaronaDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/dao/CarroDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/dao/CarroDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/dao/Recebe_CaronaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/dao/Recebe_CaronaDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/dao/UsuarioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/dao/UsuarioDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/br/ufop/brTomaz/fxml/FXMLLogin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/ufop/brTomaz/fxml/FXMLLogin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/util/Operations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/util/Operations.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.idea/modules/.gradle/" />
@@ -96,39 +96,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/dao/UsuarioDAO.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/util/Operations.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2730">
-              <caret line="186" column="5" selection-start-line="186" selection-start-column="5" selection-end-line="186" selection-end-column="5" />
+            <state relative-caret-position="338">
+              <caret line="111" lean-forward="true" selection-start-line="111" selection-end-line="111" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#656#657#0" expanded="true" />
-                <element signature="e#711#712#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/dao/Recebe_CaronaDAO.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLLoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1980">
-              <caret line="132" column="1" selection-start-line="132" selection-start-column="1" selection-end-line="132" selection-end-column="1" />
-              <folding>
-                <element signature="e#0#3999#0" expanded="true" />
-                <element signature="imports" expanded="true" />
-                <element signature="e#666#667#0" expanded="true" />
-                <element signature="e#721#722#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/dao/CarroDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-15">
-              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+            <state relative-caret-position="-7">
+              <caret line="97" column="9" lean-forward="true" selection-start-line="97" selection-start-column="9" selection-end-line="97" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -137,22 +120,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/connection/ConnectionFactory.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLAdministradorController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-255">
-              <caret line="20" column="82" selection-start-line="20" selection-start-column="82" selection-end-line="20" selection-end-column="82" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/MainApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="158">
+              <caret line="48" column="60" selection-start-line="48" selection-start-column="60" selection-end-line="48" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -204,33 +175,34 @@
         <option value="$PROJECT_DIR$/src/main/resources/br/ufop/brTomaz/fxml/FXMLOferecerCarona.fxml" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/resources/br/ufop/brTomaz/fxml/FXMLPesquisarCarona.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/bean/Recebe_Carona.java" />
         <option value="$PROJECT_DIR$/src/main/resources/br/ufop/brTomaz/fxml/FXMLHistorico.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/util/Operations.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLAlterarDadosController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLHistoricoController.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLHomePassageiroController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLHomeMotoristaController.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/MainApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLOferecerCaronaController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLPesquisarCaronaController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/br/ufop/brTomaz/css/style.css" />
-        <option value="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLCadastroController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/br/ufop/brTomaz/fxml/FXMLLogin.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/br/ufop/brTomaz/fxml/FXMLAdministrador.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/Screen.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLLoginController.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/interfaces/Deletavel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/bean/Carona.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLCadastroCarroController.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/bean/Carro.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/bean/Usuario.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLAdministradorController.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/dao/CarroDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/dao/Recebe_CaronaDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/dao/CaronaDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/security/SegurancaSistema.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/bean/Usuario.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/dao/UsuarioDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/connection/ConnectionFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/bean/Recebe_Carona.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/dao/Recebe_CaronaDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLCadastroController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/bean/Carona.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLHomeMotoristaController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLPesquisarCaronaController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLAlterarDadosController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLHistoricoController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/util/Operations.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLLoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLAdministradorController.java" />
       </list>
     </option>
   </component>
@@ -244,17 +216,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="ThumbsApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="ThumbsApp" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="ThumbsApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ThumbsApp" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="gradle" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ThumbsApp" type="b2602c69:ProjectViewProjectNode" />
@@ -336,6 +304,25 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="brTomaz" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ThumbsApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ThumbsApp" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="brTomaz" type="462c0819:PsiDirectoryNode" />
+              <item name="security" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ThumbsApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ThumbsApp" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="brTomaz" type="462c0819:PsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -352,15 +339,6 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="brTomaz" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ThumbsApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ThumbsApp" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="brTomaz" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ThumbsApp" type="b2602c69:ProjectViewProjectNode" />
@@ -373,34 +351,12 @@
             </path>
             <path>
               <item name="ThumbsApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ThumbsApp" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="ThumbsApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ThumbsApp" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ThumbsApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ThumbsApp" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ThumbsApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -559,6 +515,9 @@
       <workItem from="1562442973579" duration="9745000" />
       <workItem from="1562502653384" duration="1215000" />
       <workItem from="1562515122694" duration="2665000" />
+      <workItem from="1562552500967" duration="7757000" />
+      <workItem from="1562562009944" duration="205000" />
+      <workItem from="1562594269834" duration="5181000" />
     </task>
     <task id="LOCAL-00001" summary="Created Screens">
       <created>1561151960888</created>
@@ -638,7 +597,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="179235000" />
+    <option name="totallyTimeSpent" value="194382000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -652,7 +611,7 @@
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1368" height="715" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.375" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.39318183" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -661,14 +620,14 @@
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32871974" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.42906573" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.90378785" visible="true" weight="0.2768166" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39965397" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32871974" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.32871974" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32698962" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5007576" side_tool="true" weight="0.38062283" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49924242" weight="0.32698962" />
+      <window_info anchor="bottom" id="Event Log" order="9" show_stripe_button="false" sideWeight="0.09621212" side_tool="true" weight="0.42906573" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
@@ -719,6 +678,38 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created Screens" />
     <MESSAGE value="BD" />
@@ -733,13 +724,6 @@
     <find-history />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1687">
-          <caret line="106" column="9" selection-start-line="106" selection-start-column="9" selection-end-line="106" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.sql" />
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jfoenix/jfoenix/9.0.8/8919a7163f8bc8289f16ad6e012230d54f4f7cd0/jfoenix-9.0.8-sources.jar!/com/jfoenix/controls/JFXTextField.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -756,12 +740,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build/resources/main/br/ufop/brTomaz/fxml/FXMLCadastro.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-base/12/fd26e91311c3eac67fb63fd5ee728fb0a66e3cc7/javafx-base-12-sources.jar!/javafx/beans/value/ChangeListener.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -772,12 +756,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/FXMLHomePassageiroController.java" />
     <entry file="file://$PROJECT_DIR$/build/resources/main/br/ufop/brTomaz/fxml/FXMLHomePassageiro.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1543">
           <caret line="114" column="13" selection-start-line="114" selection-start-column="13" selection-end-line="114" selection-end-column="13" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/br/ufop/brTomaz/util/CarroUtilsTest.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -848,126 +832,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/bean/Recebe_Carona.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-12">
-          <caret line="19" column="89" selection-start-line="19" selection-start-column="89" selection-end-line="19" selection-end-column="89" />
-          <folding>
-            <element signature="e#447#448#0" expanded="true" />
-            <element signature="e#479#480#0" expanded="true" />
-            <element signature="e#526#527#0" expanded="true" />
-            <element signature="e#568#569#0" expanded="true" />
-            <element signature="e#611#612#0" expanded="true" />
-            <element signature="e#653#654#0" expanded="true" />
-            <element signature="e#720#721#0" expanded="true" />
-            <element signature="e#782#783#0" expanded="true" />
-            <element signature="e#823#824#0" expanded="true" />
-            <element signature="e#860#861#0" expanded="true" />
-            <element signature="e#920#921#0" expanded="true" />
-            <element signature="e#972#973#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/br/ufop/brTomaz/fxml/FXMLHistorico.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLAlterarDadosController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="94" selection-start-line="94" selection-end-line="123" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLHistoricoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="108" column="5" selection-start-line="108" selection-start-column="5" selection-end-line="108" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/util/Operations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-12">
-          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/br/ufop/brTomaz/fxml/FXMLOferecerCarona.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="39" column="22" lean-forward="true" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLHomePassageiroController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="60" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLHomeMotoristaController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/br/ufop/brTomaz/fxml/FXMLHomePassageiro.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLOferecerCaronaController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/br/ufop/brTomaz/fxml/FXMLPesquisarCarona.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-570">
-          <caret line="18" column="117" lean-forward="true" selection-start-line="18" selection-start-column="117" selection-end-line="18" selection-end-column="117" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLPesquisarCaronaController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2100">
-          <caret line="162" column="12" selection-start-line="162" selection-start-column="12" selection-end-line="162" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -978,62 +863,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLCadastroController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1242">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/br/ufop/brTomaz/fxml/FXMLHomeMotorista.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="35" lean-forward="true" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/br/ufop/brTomaz/fxml/FXMLLogin.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="41" lean-forward="true" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/br/ufop/brTomaz/fxml/FXMLCadastro.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="472">
           <caret line="195" selection-start-line="195" selection-end-line="195" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/br/ufop/brTomaz/fxml/FXMLAlterarDados.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/Screen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
           <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLLoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="94" column="32" lean-forward="true" selection-start-line="94" selection-start-column="32" selection-end-line="94" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1044,23 +893,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/bean/Carona.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="140" lean-forward="true" selection-start-line="140" selection-end-line="140" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/br/ufop/brTomaz/fxml/FXMLCadastroCarro.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="25" column="96" lean-forward="true" selection-start-line="25" selection-start-column="96" selection-end-line="25" selection-end-column="96" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/bean/Carro.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1074,91 +913,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLCadastroCarroController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1680">
-          <caret line="134" column="5" selection-start-line="134" selection-start-column="5" selection-end-line="134" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/bean/Usuario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-305">
-          <caret line="40" column="30" lean-forward="true" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1187#1188#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLAdministradorController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/dao/CaronaDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="204" column="9" selection-start-line="204" selection-start-column="9" selection-end-line="204" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/br/ufop/brTomaz/fxml/FXMLAdministrador.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="35" lean-forward="true" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/dao/UsuarioDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/bean/Usuario.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2730">
-          <caret line="186" column="5" selection-start-line="186" selection-start-column="5" selection-end-line="186" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#656#657#0" expanded="true" />
-            <element signature="e#711#712#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/dao/Recebe_CaronaDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1980">
-          <caret line="132" column="1" selection-start-line="132" selection-start-column="1" selection-end-line="132" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#3999#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#666#667#0" expanded="true" />
-            <element signature="e#721#722#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/MainApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/dao/CarroDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        <state relative-caret-position="795">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1167,8 +933,215 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/connection/ConnectionFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-255">
-          <caret line="20" column="82" selection-start-line="20" selection-start-column="82" selection-end-line="20" selection-end-column="82" />
+        <state relative-caret-position="-259">
+          <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/br/ufop/brTomaz/fxml/FXMLLogin.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/br/ufop/brTomaz/fxml/FXMLPesquisarCarona.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="117" selection-start-line="18" selection-start-column="117" selection-end-line="18" selection-end-column="117" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/security/SegurancaSistema.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/MainApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-142">
+          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/br/ufop/brTomaz/fxml/FXMLHomeMotorista.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="31" lean-forward="true" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/bean/Recebe_Carona.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLAlterarDadosController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1371">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLCadastroCarroController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1236">
+          <caret line="134" column="5" selection-start-line="134" selection-start-column="5" selection-end-line="134" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLCadastroController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2445">
+          <caret line="163" selection-start-line="163" selection-end-line="163" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLHistoricoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1267">
+          <caret line="2" column="31" lean-forward="true" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLHomeMotoristaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-217">
+          <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLHomePassageiroController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="42" column="9" lean-forward="true" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLOferecerCaronaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1935">
+          <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/bean/Carona.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1425">
+          <caret line="139" column="55" selection-start-line="139" selection-start-column="55" selection-end-line="139" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/dao/CaronaDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="204" column="9" selection-start-line="204" selection-start-column="9" selection-end-line="204" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/dao/CarroDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1806">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/dao/UsuarioDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="43" column="42" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/model/dao/Recebe_CaronaDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-37">
+          <caret line="111" column="62" selection-start-line="111" selection-start-column="62" selection-end-line="111" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#666#667#0" expanded="true" />
+            <element signature="e#721#722#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLPesquisarCaronaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/util/Operations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="111" lean-forward="true" selection-start-line="111" selection-end-line="111" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLLoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="97" column="9" lean-forward="true" selection-start-line="97" selection-start-column="9" selection-end-line="97" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufop/brTomaz/controller/FXMLAdministradorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="48" column="60" selection-start-line="48" selection-start-column="60" selection-end-line="48" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

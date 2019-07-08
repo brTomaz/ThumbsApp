@@ -11,6 +11,7 @@ import com.jfoenix.controls.JFXListView;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 
 import java.io.IOException;
 import java.net.URL;
@@ -39,7 +40,17 @@ public class FXMLAdministradorController implements Initializable {
     private void deletar() throws IOException {
         listViewItens.getSelectionModel().getSelectedItem().deletar();
         Deletavel deletavel = listViewItens.getSelectionModel().getSelectedItem();
+        alertDelete();
         listViewItens.getItems().remove(deletavel);
+    }
+
+    private void alertDelete()
+    {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Exclusão");
+        alert.setHeaderText("Exclusão de item");
+        alert.setContentText("O item selecionado foi excluído do sistema");
+        alert.showAndWait();
     }
 
     @FXML

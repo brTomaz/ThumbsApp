@@ -1,18 +1,13 @@
 package br.ufop.brTomaz.controller;
 
-import br.ufop.brTomaz.MainApplication;
 import br.ufop.brTomaz.model.bean.Carona;
-import br.ufop.brTomaz.model.bean.Usuario;
 import br.ufop.brTomaz.model.dao.CaronaDAO;
 import br.ufop.brTomaz.model.dao.Recebe_CaronaDAO;
-import br.ufop.brTomaz.model.dao.UsuarioDAO;
 import br.ufop.brTomaz.util.Operations;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
 import javafx.scene.control.ListView;
-import javafx.scene.control.TextInputDialog;
 
 import java.io.IOException;
 import java.net.URL;

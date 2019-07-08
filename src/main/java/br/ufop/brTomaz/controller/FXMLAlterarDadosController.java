@@ -3,6 +3,7 @@ package br.ufop.brTomaz.controller;
 import br.ufop.brTomaz.MainApplication;
 import br.ufop.brTomaz.model.bean.Usuario;
 import br.ufop.brTomaz.model.dao.UsuarioDAO;
+import br.ufop.brTomaz.security.SegurancaSistema;
 import br.ufop.brTomaz.util.MaskFieldUtil;
 import br.ufop.brTomaz.util.Operations;
 import com.jfoenix.controls.JFXButton;
@@ -13,7 +14,6 @@ import javafx.beans.property.SimpleBooleanProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
-import javafx.scene.control.TextInputDialog;
 
 import java.io.IOException;
 import java.net.URL;
@@ -70,7 +70,7 @@ public class FXMLAlterarDadosController implements Initializable {
         String nomeUsuario = txtNomeUsuario.getText();
         String telefone = MaskFieldUtil.onlyDigitsValue(txtTelefone);
         String email = txtEmail.getText();
-        String senha = txtSenha.getText();
+        String senha = SegurancaSistema.criptografarSenha(txtSenha.getText());
 
         Usuario usuario = new Usuario(usuarioCorrente.getCpf(), nome, email, null, senha, telefone, nomeUsuario);
 

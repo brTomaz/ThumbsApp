@@ -7,6 +7,7 @@ package br.ufop.brTomaz.model.bean;
 
 import br.ufop.brTomaz.model.dao.UsuarioDAO;
 import br.ufop.brTomaz.model.interfaces.Deletavel;
+import br.ufop.brTomaz.security.SegurancaSistema;
 
 /**
  *
@@ -77,9 +78,7 @@ public class Usuario implements Deletavel {
         return senha;
     }
 
-    public void setSenha(String senha) {
-        this.senha = senha;
-    }
+    public void setSenha(String senha) { this.senha = SegurancaSistema.criptografarSenha(senha); }
 
     public String getTelefone() {
         return telefone;

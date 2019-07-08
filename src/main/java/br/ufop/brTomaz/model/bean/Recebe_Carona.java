@@ -11,15 +11,13 @@ package br.ufop.brTomaz.model.bean;
  */
 public class Recebe_Carona {
     private int id_carona;
-    private int id_caronaPassageiro;
     private String cpf_passageiro;
 
     public Recebe_Carona() {
     }
 
-    public Recebe_Carona(int id_carona, int id_caronaPassageiro, String cpf_passageiro) {
+    public Recebe_Carona(int id_carona, String cpf_passageiro) {
         this.id_carona = id_carona;
-        this.id_caronaPassageiro = id_caronaPassageiro;
         this.cpf_passageiro = cpf_passageiro;
     }
 
@@ -29,14 +27,6 @@ public class Recebe_Carona {
 
     public void setId_carona(int id_carona) {
         this.id_carona = id_carona;
-    }
-
-    public int getId_caronaPassageiro() {
-        return id_caronaPassageiro;
-    }
-
-    public void setId_caronaPassageiro(int id_caronaPassageiro) {
-        this.id_caronaPassageiro = id_caronaPassageiro;
     }
 
     public String getCpf_passageiro() {

@@ -124,12 +124,20 @@ public class Carona implements Deletavel {
     @Override
     public String toString()
     {
-        return "Dia: " + getDia() + "   ---   Horário: " + getHorario() + "   ---   Carro: " + getPlaca_carro() + "   ---   Vagas: " + getQuantidade_atual();
+        String[] splitDia = dia.split("-");
+        String dia = splitDia[2];
+        String mes = splitDia[1];
+        String ano = splitDia[0];
+        return "Dia: " + dia + "/" + mes + "/" + ano + "   ---   Horário: " + getHorario() + "   ---   Carro: " + getPlaca_carro() + "   ---   Vagas: " + (getQuantidade_vagas() - getQuantidade_atual());
     }
 
     public String stringHistorico()
     {
-        return "Dia: " + getDia() + "   ---   Horário: " + getHorario() + "   ---   Carro: " + getPlaca_carro();
+        String[] splitDia = dia.split("-");
+        String dia = splitDia[2];
+        String mes = splitDia[1];
+        String ano = splitDia[0];
+        return "Dia: " + dia + "/" + mes + "/" + ano + "   ---   Horário: " + getHorario() + "   ---   Carro: " + getPlaca_carro();
     }
 
     @Override

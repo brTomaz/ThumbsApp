@@ -1,14 +1,14 @@
 package br.ufop.brTomaz.controller;
 
-import br.ufop.brTomaz.MainApplication;
 import br.ufop.brTomaz.model.bean.Carona;
 import br.ufop.brTomaz.model.bean.Recebe_Carona;
+import br.ufop.brTomaz.model.bean.Usuario;
 import br.ufop.brTomaz.model.dao.CaronaDAO;
 import br.ufop.brTomaz.model.dao.Recebe_CaronaDAO;
+import br.ufop.brTomaz.model.dao.UsuarioDAO;
 import br.ufop.brTomaz.util.Operations;
 import com.jfoenix.controls.JFXAutoCompletePopup;
 import com.jfoenix.controls.JFXTextField;
-import javafx.beans.property.BooleanProperty;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -22,7 +22,8 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
-import static br.ufop.brTomaz.MainApplication.*;
+import static br.ufop.brTomaz.MainApplication.setScreen;
+import static br.ufop.brTomaz.MainApplication.usuarioCorrente;
 
 public class FXMLPesquisarCaronaController implements Initializable {
 
@@ -118,6 +119,7 @@ public class FXMLPesquisarCaronaController implements Initializable {
                 } else {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("Indisponível");
+                    alert.setHeaderText("Caronas indiponíveis");
                     alert.setContentText("Não foram encontradas caronas para a sua pesquisa");
                     alert.show();
                 }
@@ -132,36 +134,47 @@ public class FXMLPesquisarCaronaController implements Initializable {
         if(carona.getQuantidade_atual() >= carona.getQuantidade_vagas())
         {
             Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Entrada não efetuada");
-            alert.setContentText("Não foi possível cadastrar-se nesta carona. O carro está cheio.");
+            alert.setTitle("Erro");
+            alert.setHeaderText("Entrada não efetuada");
+            alert.setContentText("Não foi possível fazer o seu cadastro nesta carona. O carro está cheio.");
             alert.show();
             setScreen(Screen.HOME_PASSAGEIRO);
         }
         else
         {
-            CaronaDAO caronaDAO = new CaronaDAO();
-            List<Carona> caronaList = caronaDAO.findAll();
-            int idCarona = caronaList.size() + 1;
+            int idCarona = listViewCaronas.getSelectionModel().getSelectedItem().getIdcarona();
 
-            Recebe_CaronaDAO recebeCaronaDAO = new Recebe_CaronaDAO();
-            List<Recebe_Carona> recebeCaronaList = recebeCaronaDAO.findAll();
-            int idCaronaPassageiro = recebeCaronaList.size() + 1;
-
-            Recebe_Carona recebeCarona = new Recebe_Carona(idCarona, idCaronaPassageiro, usuarioCorrente.getCpf());
+            Recebe_Carona recebeCarona = new Recebe_Carona(idCarona, usuarioCorrente.getCpf());
             Recebe_CaronaDAO salvarCaronaDAO = new Recebe_CaronaDAO();
             boolean ok = salvarCaronaDAO.save(recebeCarona);
             if(ok)
             {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Entrada efetuada com sucesso");
+                alert.setTitle("Carona");
+                alert.setHeaderText("Entrada efetuada com sucesso");
                 alert.setContentText("Você foi registrado nesta carona.");
                 alert.showAndWait();
+
+                UsuarioDAO usuarioDAO = new UsuarioDAO();
+                Usuario motorista = usuarioDAO.buscaMotorista(recebeCarona);
+
+                Alert contato = new Alert(Alert.AlertType.CONFIRMATION);
+                contato.setTitle("Por favor, entre em contato:");
+                String telefone = "(" + motorista.getTelefone().substring(1, 3) + ") " + motorista.getTelefone().substring(3, 7) + "-" + motorista.getTelefone().substring(7);
+                contato.setContentText("Nome: " + motorista.getNome() + "\n"+"Telefone: " + telefone);
+                contato.showAndWait();
+
+                CaronaDAO novaCaronaDAO = new CaronaDAO();
+                novaCaronaDAO.modificarQuantidadeVagasAtual(carona);
             }
-
-            CaronaDAO novaCaronaDAO = new CaronaDAO();
-
-            novaCaronaDAO.modificarQuantidadeVagasAtual(carona);
-
+            else
+            {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Erro");
+                alert.setHeaderText("A entrada não foi efetuada com sucesso");
+                alert.setContentText("Não foi possível efetuar o seu registro nesta carona.");
+                alert.showAndWait();
+            }
             setScreen(Screen.HOME_PASSAGEIRO);
         }
     }

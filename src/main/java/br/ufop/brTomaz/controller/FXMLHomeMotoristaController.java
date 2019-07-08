@@ -32,7 +32,7 @@ public class FXMLHomeMotoristaController implements Initializable {
 
     @FXML
     private void pesquisar() throws IOException {
-        caronas();
+        Operations.caronas();
     }
 
     @FXML

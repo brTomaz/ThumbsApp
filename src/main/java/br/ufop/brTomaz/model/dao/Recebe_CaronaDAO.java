@@ -109,7 +109,7 @@ public class Recebe_CaronaDAO {
 
     public boolean delete(Recebe_Carona carona_recebida){
 
-        String sql = "DELETE FROM recebe_carona WHERE idcar = ? and pcpf = ?";
+        String sql = "DELETE FROM recebe_carona WHERE idcarona = ? and cpf_passageiro = ?";
 
         return statementExecute(carona_recebida, sql);
     }

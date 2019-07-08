@@ -23,6 +23,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import static br.ufop.brTomaz.MainApplication.usuarioCorrente;
+
 public class FXMLCadastroController implements Initializable {
 
     @FXML
@@ -133,6 +135,9 @@ public class FXMLCadastroController implements Initializable {
         Boolean ok = new UsuarioDAO().save(usuario);
 
         if (ok) {
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            usuarioCorrente = usuarioDAO.retrieveUser(email);
+
             MainApplication.setScreen(Screen.HOME_MOTORISTA);
         } else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -154,6 +159,9 @@ public class FXMLCadastroController implements Initializable {
         Boolean ok = new UsuarioDAO().save(usuario);
 
         if (ok) {
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            usuarioCorrente = usuarioDAO.retrieveUser(email);
+
             MainApplication.setScreen(Screen.HOME_PASSAGEIRO);
         } else {
             Alert alert = new Alert(Alert.AlertType.ERROR);

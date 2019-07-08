@@ -2,20 +2,25 @@ package br.ufop.brTomaz.controller;
 
 import br.ufop.brTomaz.MainApplication;
 import br.ufop.brTomaz.model.dao.UsuarioDAO;
+import br.ufop.brTomaz.security.SegurancaSistema;
+import br.ufop.brTomaz.util.Operations;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
-import com.sun.tools.javac.Main;
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
+import javafx.geometry.Insets;
+import javafx.scene.control.*;
+import javafx.scene.layout.GridPane;
+import javafx.util.Pair;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 import static br.ufop.brTomaz.MainApplication.usuarioCorrente;
@@ -70,7 +75,7 @@ public class FXMLLoginController implements Initializable {
 
         if(usuarioCorrente != null)
         {
-            permission.setValue(usuarioCorrente.getSenha().equals(senha));
+            permission.setValue(usuarioCorrente.getSenha().equals(SegurancaSistema.criptografarSenha(senha)));
             tries.set(tries.getValue() - 1);
         }
         else
@@ -92,6 +97,24 @@ public class FXMLLoginController implements Initializable {
 
     @FXML
     private void administrador() throws IOException {
-        MainApplication.setScreen(Screen.ADMINISTRADOR);
+        Dialog<Pair<String, String>> dialog = new Dialog<>();
+        dialog.setTitle("Administrador");
+        dialog.setHeaderText("Senha do administrador");
+
+        ButtonType loginButtonType = new ButtonType("Login", ButtonBar.ButtonData.OK_DONE);
+        String password = Operations.panePassword(dialog, loginButtonType);
+
+        if(password.equals("admin"))
+        {
+            MainApplication.setScreen(Screen.ADMINISTRADOR);
+        }
+        else
+        {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Erro");
+            alert.setHeaderText("Senha inválida");
+            alert.setContentText("A senha digitada está incorreta.");
+            alert.show();
+        }
     }
 }
